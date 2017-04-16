@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 import Hero from './components/Hero.jsx';
+import Slogan from './components/Slogan.jsx';
+import Product from './components/Product.jsx';
+import Team from './components/Team.jsx';
 
 // App component - represents the whole app
 export default class App extends Component {
@@ -9,6 +12,9 @@ export default class App extends Component {
     return (
       <div>
         <Hero></Hero>
+        <Slogan></Slogan>
+        <Product></Product>
+        <Team></Team>
       </div>
     );
   }
