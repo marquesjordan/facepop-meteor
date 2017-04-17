@@ -61,7 +61,23 @@ export default class Contact extends Component {
           		<a href="https://plus.google.com/u/0/112716641914283714321/posts" className="social-links" target="_blank"><img src="https://s3-us-west-2.amazonaws.com/facepop/social/icon_google_plus.png" className="social-link-icon" /></a>
           	</div>
           	<div className="main-text">
-          		INVESTMENT INQUIRIES ARE WELCOME
+              <h1>
+                GEOFFREY A. WEG<br />
+                & ASSOCIATES P.C.
+              </h1>
+              <div className="pad-bottom-sm">
+                3420 Ocean Park Blvd., Suite 3025<br />
+                Santa Monica, CA 90405
+              </div>
+              <h3>
+                Phone: (310) 746 6929
+              </h3>
+              <h3>
+                Email: gweg@gweglaw.com
+              </h3>
+              <h3>
+                Fax: (310) 310 3502
+              </h3>
           	</div>
           	<div className="copy-text">
           		USPTO/Patent Pending/File Serial No. 15/355,038
