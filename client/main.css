@@ -18,6 +18,14 @@ div p {
 	line-height: 1.4;
 }
 
+.pad-bottom-sm {
+  padding-bottom: 15px;
+}
+
+.pad-bottom-lg {
+  padding-bottom: 30px;
+}
+
 .page-title {
 	font-family: "A Love of Thunder";
 	font-size: 136px;
@@ -282,7 +290,7 @@ a.social-links:hover {
 }
 
 .media {
-    padding: 20px 0;
+    padding: 25px 0;
 }
 
 .media-heading {

@@ -6,7 +6,7 @@ export default class Slogan extends Component {
     return (
       <div className="slogan-section">
       	<div className="container">
-      		<div className="row">
+      		<div className="row pad-bottom-lg">
             <h1>
               FACEPOP IS AN EMERGING MOBILE APPLICATION AIMING TO ENHANCE THE
               MESSAGING EXPERIENCE AROUND THE GLOBE

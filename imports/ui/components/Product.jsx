@@ -28,7 +28,7 @@ export default class Product extends Component {
               PRODUCT
             </div>
 
-            <div className="product-video-container">
+            <div className="product-video-container pad-bottom-lg">
               <div className="video-mask">
                 <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster25.png" id="video25" className="contact-video-footer">
                   <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-25.mp4" type="video/mp4" />
@@ -38,19 +38,19 @@ export default class Product extends Component {
               </div>
             </div>
 
-            <div className="product-content">
-            	<div className="main-text" >
+            <div className="product-content pad-bottom-lg">
+            	<div className="main-text pad-bottom-sm">
             		WE ARE AN EMERGING MOBILE APPLICATION MOTIVATED TO RESHAPE YOUR MESSAGING EXPERIENCE WITH A RECOGNIZABLE MOTION VISUAL EFFECT; THE TALKING HEAD.
             	</div>
-            	<div className="main-text">
+            	<div className="main-text pad-bottom-sm">
             		THE PATENT PENDING FACEPOP ALGORITHM WILL ALLOW USERS TO CREATE AND SHARE SELF-MADE TALKING HEAD VIDEOS VIA TEXT MESSAGING AND/OR SOCIAL MEDIA PLATFORMS.
             	</div>
 
-              <div className="main-text" >
+              <div className="main-text pad-bottom-lg">
               	YOUR SNAPPY FACEPOP MESSAGE MAY INCLUDE:
               </div>
 
-              <div className="row">
+              <div className="row pad-bottom-lg">
 
                 <div className="col-xs-4">
                   <div className="product-list-group">
@@ -73,7 +73,7 @@ export default class Product extends Component {
                   <div className="product-video-group">
                     <div className="product-video-group__item">
 
-                      <div className="product-video-container">
+                      <div className="product-video-container pad-bottom-lg">
                         <div className="video-mask contact-video-mask">
                           <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster105.png" id="video105" className="contact-video-footer">
                             <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-105.mp4" type="video/mp4" />
@@ -105,7 +105,7 @@ export default class Product extends Component {
                   </div>
                   <div className="product-video-group__item">
 
-                    <div className="product-video-container">
+                    <div className="product-video-container pad-bottom-lg">
                       <div className="video-mask contact-video-mask">
                         <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster83.png" id="video83" className="contact-video-footer">
                           <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-83.mp4" type="video/mp4" />
@@ -136,7 +136,7 @@ export default class Product extends Component {
                   </div>
                   <div className="product-video-group__item">
 
-                    <div className="product-video-container">
+                    <div className="product-video-container pad-bottom-lg">
                       <div className="video-mask contact-video-mask">
                         <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster75.png" id="video40" className="contact-video-footer">
                           <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-40.mp4" type="video/mp4" />
