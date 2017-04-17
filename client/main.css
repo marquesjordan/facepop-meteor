@@ -33,6 +33,18 @@ div p {
 	color: #FFFFFF;
 }
 
+.page-title-corporate {
+  font-family: "A Love of Thunder";
+  font-size: 136px;
+  text-align: center;
+  color: #4B88D3;
+}
+
+.media-left,
+.media-object {
+  width: 160px;
+}
+
 .hero-section {
   background-color: #FE9A41;
 	color: #FFFFFF;

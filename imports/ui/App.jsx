@@ -5,6 +5,7 @@ import Slogan from './components/Slogan.jsx';
 import Product from './components/Product.jsx';
 import Team from './components/Team.jsx';
 import Contact from './components/Contact.jsx';
+import Corporate from './components/Corporate.jsx';
 
 // App component - represents the whole app
 export default class App extends Component {
@@ -16,6 +17,7 @@ export default class App extends Component {
         <Slogan></Slogan>
         <Product></Product>
         <Team></Team>
+        <Corporate></Corporate>
         <Contact></Contact>
       </div>
     );
