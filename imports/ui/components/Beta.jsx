@@ -11,10 +11,15 @@ export default class Beta extends Component {
     super(props);
     this.handleJoinClick = this.handleJoinClick.bind(this);
     this.handleCorpClick = this.handleCorpClick.bind(this);
+    this.onAccessSubmited = this.onAccessSubmited.bind(this);
     this.state = {
       join: false,
       corp: false
     };
+  }
+
+  onAccessSubmited(allAcessCode) {
+    this.props.onAccessSubmit(allAcessCode)
   }
 
   handleJoinClick() {
@@ -35,7 +40,7 @@ export default class Beta extends Component {
     }
 
     if (isCorp) {
-      myForm = <Corporate />;
+      myForm = <Corporate handleAccessFormSubmit={this.onAccessSubmited}/>;
     }
 
     return (

@@ -15,11 +15,11 @@ export default class Join extends Component {
 
               <form>
                 <div className="form-group">
-                  <label for="email">Email</label>
+                  <label htmlFor="email">Email</label>
                   <input type="email" className="form-control" id="email" ref="email" placeholder="Enter Your Email Address" />
                 </div>
                 <div className="form-group">
-                  <label for="ageSelect">Age Group</label>
+                  <label htmlFor="ageSelect">Age Group</label>
                   <select id="ageSelect" className="form-control">
                     <option>18 and under</option>
                     <option>12 to 25</option>

@@ -18,6 +18,10 @@ div p {
 	line-height: 1.4;
 }
 
+.hide {
+  display: none;
+}
+
 .pad-bottom-sm {
   padding-bottom: 15px;
 }

@@ -5,6 +5,9 @@ import Video from './common/Video.jsx';
 
 // Task component - represents a single todo item
 export default class Team extends Component {
+  constructor(props) {
+     super(props);
+  }
 
   render() {
     return (
@@ -14,8 +17,8 @@ export default class Team extends Component {
             <div className="page-title">
             		TEAM
           	</div>
-            
-            <Video video="29"></Video>
+
+            <Video video="29" isRestricted={this.props.isRestricted} ></Video>
 
             <div className="row pad-bottom-lg">
               <div className="col-sm-6">

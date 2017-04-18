@@ -4,6 +4,9 @@ import Video from './common/Video.jsx';
 
 // Task component - represents a single todo item
 export default class Contact extends Component {
+  constructor(props) {
+     super(props);
+  }q
 
   render() {
     return (
@@ -16,7 +19,7 @@ export default class Contact extends Component {
             		CONTACT
           	</div>
           	<div className="pad-bottom-lg">
-          		 <Video video="75"></Video>
+          		 <Video video="75" isRestricted={this.props.isRestricted} ></Video>
             </div>
 
           	<div>
@@ -63,13 +66,13 @@ export default class Contact extends Component {
           	<div className="footer-videos pad-bottom-lg">
               <div className="row">
                 <div className="col-sm-4">
-                  <Video video="51"></Video>
+                  <Video video="51" isRestricted={this.props.isRestricted} ></Video>
                 </div>
                 <div className="col-sm-4">
-                   <Video video="38"></Video>
+                   <Video video="38" isRestricted={this.props.isRestricted} ></Video>
                 </div>
                 <div className="col-sm-4">
-                   <Video video="135"></Video>
+                   <Video video="135" isRestricted={this.props.isRestricted} ></Video>
                 </div>
               </div>
 

@@ -26,7 +26,7 @@ export default class Product extends Component {
 
 
     return(
-      <div className="product-video-container pad-bottom-lg">
+      <div className={ this.props.isRestricted ? 'hide' : 'product-video-container pad-bottom-lg' }>
         <div className="video-mask">
           <video poster={poster} id={videoId} className="contact-video-footer">
             <source src={videoSrc} type="video/mp4" />
