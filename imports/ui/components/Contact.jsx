@@ -1,24 +1,9 @@
 import React, { Component } from 'react';
 
+import Video from './common/Video.jsx';
+
 // Task component - represents a single todo item
 export default class Contact extends Component {
-  playPause(id) {
-    // debugger;
-    const clicked_video = `video${id}`;
-    const myVideo = document.getElementById(clicked_video);
-    const controllerImage = document.getElementById(id);
-
-    if (myVideo.paused) {
-        myVideo.play();
-        $('#'+id).hide();
-    }
-
-    myVideo.onended = function() {
-      $('#'+id).show();
-      controllerImage.src = 'https://s3-us-west-2.amazonaws.com/facepop/play-button.png';
-    };
-  }
-
 
   render() {
     return (
@@ -31,16 +16,9 @@ export default class Contact extends Component {
             		CONTACT
           	</div>
           	<div className="pad-bottom-lg">
-          		 <div className="product-video-container">
-          	      <div className="video-mask contact-video-mask">
-          	        <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster75.png" id="video75" className="contact-video-footer">
-          	          <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-75.mp4" type="video/mp4" />
-          	          Your browser does not support HTML5 video.
-          	        </video>
-          	        <img id="75" className="play-button product-video-play-image" onClick={this.playPause.bind(this, '75')} src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png" />
-          	      </div>
-          	     </div>
-              </div>
+          		 <Video video="75"></Video>
+            </div>
+
           	<div>
           		<div className="main-text pad-bottom-sm">
           			IN THE NEAR FUTURE, THE POWER OF FAST MESSAGING AND SHORT VIDEO WILL TRULY BE IN YOUR HANDS!
@@ -85,37 +63,13 @@ export default class Contact extends Component {
           	<div className="footer-videos pad-bottom-lg">
               <div className="row">
                 <div className="col-sm-4">
-                  <div className="product-video-container footer-video">
-              	      <div className="video-mask contact-video-mask ">
-              	        <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster51.png" id="video51" className="contact-video-footer">
-              	          <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-51.mp4" type="video/mp4" />
-              	          Your browser does not support HTML5 video.
-              	        </video>
-              	        <img id="51" className="play-button product-video-play-image" onClick={this.playPause.bind(this, '51')} src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png" />
-              	      </div>
-              	  </div>
+                  <Video video="51"></Video>
                 </div>
                 <div className="col-sm-4">
-                  <div className="product-video-container footer-video">
-                    <div className="video-mask contact-video-mask ">
-                      <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster38.png" id="video38" className="contact-video-footer">
-                        <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-38.mp4" type="video/mp4" />
-                        Your browser does not support HTML5 video.
-                      </video>
-                      <img id="38" className="play-button product-video-play-image" onClick={this.playPause.bind(this, '38')} src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png" />
-                    </div>
-              	   </div>
+                   <Video video="38"></Video>
                 </div>
                 <div className="col-sm-4">
-                  <div className="product-video-container footer-video">
-                      <div className="video-mask contact-video-mask ">
-                        <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster75.png" id="video135" className="contact-video-footer">
-                          <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-135.mp4" type="video/mp4" />
-                          Your browser does not support HTML5 video.
-                        </video>
-                        <img id="135" className="play-button product-video-play-image" onClick={this.playPause.bind(this, '135')} src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png" />
-                      </div>
-                   </div>
+                   <Video video="135"></Video>
                 </div>
               </div>
 

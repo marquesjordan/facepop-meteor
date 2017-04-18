@@ -1,23 +1,9 @@
 import React, { Component } from 'react';
 
+import Video from './common/Video.jsx';
+
 // Task component - represents a single todo item
 export default class Product extends Component {
-  playPause(id) {
-    // debugger;
-    const clicked_video = `video${id}`;
-    const myVideo = document.getElementById(clicked_video);
-    const controllerImage = document.getElementById(id);
-
-    if (myVideo.paused) {
-        myVideo.play();
-        $('#'+id).hide();
-    }
-
-    myVideo.onended = function() {
-      $('#'+id).show();
-      controllerImage.src = 'https://s3-us-west-2.amazonaws.com/facepop/play-button.png';
-    };
-  }
 
   render() {
     return (
@@ -28,15 +14,7 @@ export default class Product extends Component {
               PRODUCT
             </div>
 
-            <div className="product-video-container pad-bottom-lg">
-              <div className="video-mask">
-                <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster25.png" id="video25" className="contact-video-footer">
-                  <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-25.mp4" type="video/mp4" />
-                  Your browser does not support HTML5 video.
-                </video>
-                <img id="25" ref="25" className="play-button product-video-play-image" onClick={this.playPause.bind(this, '25')} src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png" />
-              </div>
-            </div>
+            <Video video="25"></Video>
 
             <div className="product-content pad-bottom-lg">
             	<div className="main-text pad-bottom-sm">
@@ -72,16 +50,7 @@ export default class Product extends Component {
                   </div>
                   <div className="product-video-group">
                     <div className="product-video-group__item">
-
-                      <div className="product-video-container pad-bottom-lg">
-                        <div className="video-mask contact-video-mask">
-                          <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster105.png" id="video105" className="contact-video-footer">
-                            <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-105.mp4" type="video/mp4" />
-                            Your browser does not support HTML5 video.
-                          </video>
-                          <img id="105" className="play-button product-video-play-image" onClick={this.playPause.bind(this, '105')} src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png" />
-                        </div>
-                      </div>
+                      <Video video="105"></Video>
                     </div>
                   </div>
                 </div>
@@ -104,16 +73,7 @@ export default class Product extends Component {
                     <p className="product-questions">ARE THEY PHOTOS?</p>
                   </div>
                   <div className="product-video-group__item">
-
-                    <div className="product-video-container pad-bottom-lg">
-                      <div className="video-mask contact-video-mask">
-                        <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster83.png" id="video83" className="contact-video-footer">
-                          <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-83.mp4" type="video/mp4" />
-                          Your browser does not support HTML5 video.
-                        </video>
-                        <img id="83" className="play-button product-video-play-image" onClick={this.playPause.bind(this, '83')} src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png" />
-                      </div>
-                    </div>
+                    <Video video="83"></Video>
                   </div>
                 </div>
                 <div className="col-xs-4">
@@ -134,17 +94,10 @@ export default class Product extends Component {
                   <div className="product-question">
                     <p className="product-questions">ANIMATED EMOJIS?</p>
                   </div>
-                  <div className="product-video-group__item">
+                  <div className="product-video-group__item pad-bottom-lg">
 
-                    <div className="product-video-container pad-bottom-lg">
-                      <div className="video-mask contact-video-mask">
-                        <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster75.png" id="video40" className="contact-video-footer">
-                          <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-40.mp4" type="video/mp4" />
-                          Your browser does not support HTML5 video.
-                        </video>
-                        <img id="40" className="play-button product-video-play-image" onClick={this.playPause.bind(this, '40')} src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png" />
-                      </div>
-                    </div>
+
+                    <Video video="40"></Video>
                   </div>
                 </div>
               </div>

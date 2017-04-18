@@ -43,7 +43,7 @@ export default class Beta extends Component {
       	<div className="container">
       		<div className="row">
             <div className="page-title-corporate">
-                GET ENVOLVED
+                GET INVOLVED
             </div>
 
             <div className="row">
@@ -55,7 +55,7 @@ export default class Beta extends Component {
                       <button type="button" className="btn btn-primary" onClick={this.handleJoinClick}>Join The Group</button>
                     </div>
                     <div className="btn-group" role="group">
-                      <button type="button" className="btn btn-default" onClick={this.handleCorpClick}>Corporate</button>
+                      <button type="button" className="btn btn-default" onClick={this.handleCorpClick}>All Access</button>
                     </div>
                   </div>
                 </div>

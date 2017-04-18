@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
 import {ReadMore} from 'react-read-more';
 
+import Video from './common/Video.jsx';
+
 // Task component - represents a single todo item
 export default class Team extends Component {
-
-  playPause(id) {
-    // debugger;
-    const clicked_video = `video${id}`;
-    const myVideo = document.getElementById(clicked_video);
-    const controllerImage = document.getElementById(id);
-
-    if (myVideo.paused) {
-        myVideo.play();
-        $('#'+id).hide();
-    }
-
-    myVideo.onended = function() {
-      $('#'+id).show();
-      controllerImage.src = 'https://s3-us-west-2.amazonaws.com/facepop/play-button.png';
-    };
-  }
 
   render() {
     return (
@@ -29,17 +14,8 @@ export default class Team extends Component {
             <div className="page-title">
             		TEAM
           	</div>
-
-
-            <div className="product-video-container pad-bottom-lg">
-              <div className="video-mask contact-video-mask">
-                <video poster="https://s3-us-west-2.amazonaws.com/facepop/poster29.png" id="video29" className="contact-video-footer">
-                  <source src="https://s3-us-west-2.amazonaws.com/facepop/video/video-29.mp4" type="video/mp4" />
-                  Your browser does not support HTML5 video.
-                </video>
-                <img id="29" className="play-button product-video-play-image" onClick={this.playPause.bind(this, '29')} src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png" />
-              </div>
-            </div>
+            
+            <Video video="29"></Video>
 
             <div className="row pad-bottom-lg">
               <div className="col-sm-6">
