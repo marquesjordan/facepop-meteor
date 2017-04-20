@@ -7,6 +7,7 @@ import Product from './components/Product.jsx';
 import Team from './components/Team.jsx';
 import Contact from './components/Contact.jsx';
 import Beta from './components/Beta.jsx';
+import Survey from './components/Survey.jsx';
 
 // App component - represents the whole app
 export default class App extends Component {
@@ -21,7 +22,7 @@ export default class App extends Component {
 //
   handleAllAccessSubmit(allAcessCode) {
     const ALL_ACCESS_CODE = "100billion";
-    
+
     if(allAcessCode === ALL_ACCESS_CODE) {
       this.setState({isRestricted: false});
     }
@@ -36,8 +37,10 @@ export default class App extends Component {
         {!this.state.isRestricted &&
           <Product isRestricted={this.state.isRestricted}></Product>
         }
+
         <Team isRestricted={this.state.isRestricted}></Team>
         <Beta isRestricted={this.state.isRestricted} onAccessSubmit={this.handleAllAccessSubmit}></Beta>
+        <Survey></Survey>
         <Contact isRestricted={this.state.isRestricted}></Contact>
       </div>
     );
