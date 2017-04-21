@@ -17,9 +17,16 @@ div p {
 	font-family: "Arial Rounded";
 	line-height: 1.4;
 }
+.active {
+  display: block;
+}
 
 .hide {
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .pad-bottom-sm {

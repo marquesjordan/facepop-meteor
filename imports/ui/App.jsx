@@ -16,16 +16,26 @@ export default class App extends Component {
  constructor(props) {
     super(props);
     this.handleAllAccessSubmit = this.handleAllAccessSubmit.bind(this);
+    this.handleAnswerClick = this.handleAnswerClick.bind(this);
 
-    this.state = {isRestricted: true};
+    this.state = {
+      isRestricted: true,
+      questionCount: 1
+    };
   }
-//
+
   handleAllAccessSubmit(allAcessCode) {
     const ALL_ACCESS_CODE = "100billion";
 
     if(allAcessCode === ALL_ACCESS_CODE) {
       this.setState({isRestricted: false});
     }
+  }
+
+
+  handleAnswerClick(event) {
+    const count = this.state.questionCount + 1;
+    this.setState({questionCount: count});
   }
 
   render() {
@@ -40,7 +50,7 @@ export default class App extends Component {
 
         <Team isRestricted={this.state.isRestricted}></Team>
         <Beta isRestricted={this.state.isRestricted} onAccessSubmit={this.handleAllAccessSubmit}></Beta>
-        <Survey></Survey>
+        <Survey questionCount={this.state.questionCount} onAnswerSubmit={this.handleAnswerClick}></Survey>
         <Contact isRestricted={this.state.isRestricted}></Contact>
       </div>
     );

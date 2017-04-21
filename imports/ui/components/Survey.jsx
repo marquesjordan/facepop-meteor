@@ -3,6 +3,9 @@ import SurveyQuestion from './SurveyQuestions.jsx';
 
 // Task component - represents a single todo item
 export default class Survey extends Component {
+  constructor(props) {
+     super(props);
+  }
 
   getQuestions() {
     return [
@@ -59,7 +62,12 @@ export default class Survey extends Component {
 
   renderQuestions() {
     return this.getQuestions().map((question) => (
-      <SurveyQuestion key={question._id} question={question} />
+      <SurveyQuestion
+        key={question._id}
+        question={question}
+        questionCount={this.props.questionCount}
+        onAnswerSubmit={this.props.onAnswerSubmit}
+      />
     ));
   }
 
