@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// Task component - represents a single todo item
+
 export default class Slogan extends Component {
   render() {
     return (
@@ -12,6 +12,16 @@ export default class Slogan extends Component {
               <h1 className="main-text pad-bottom-lg">
                 WELCOME TO THE FACEPOP FAMILY!
               </h1>
+
+              <h1 className="main-text pad-bottom-lg">
+                Please take a moment and complete our survey below.
+              </h1>
+
+              <h1 className="main-text pad-bottom-lg">
+                Thank You.
+              </h1>
+
+
 
             </div>
       		</div>

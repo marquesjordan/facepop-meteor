@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SurveyQuestion from './SurveyQuestions.jsx';
 
-// Task component - represents a single todo item
+
 export default class Survey extends Component {
   constructor(props) {
      super(props);

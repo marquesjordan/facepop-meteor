@@ -1,7 +1,25 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
-// Task component - represents a single todo item
+import { Emails } from '../../api/emails.js';
+
 export default class Join extends Component {
+
+  handleSubmit(event) {
+      event.preventDefault();
+      const email = ReactDOM.findDOMNode(this.refs.email).value.trim();
+      const age = ReactDOM.findDOMNode(this.refs.ageSelect).value.trim();
+
+      Emails.insert({
+        email,
+        age,
+        createdAt: new Date(), // current time
+      });
+
+      this.props.handleJoinSubmit();
+  }
+
   render() {
     return (
       <div className="join-form">
@@ -13,14 +31,14 @@ export default class Join extends Component {
                 SO YOU WANT TO BECOME ONE OF OUR EXCLUSIVE BETA TESTERS?
               </div>
 
-              <form>
+              <form onSubmit={this.handleSubmit.bind(this)}>
                 <div className="form-group">
                   <label htmlFor="email">Email</label>
                   <input type="email" className="form-control" id="email" ref="email" placeholder="Enter Your Email Address" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="ageSelect">Age Group</label>
-                  <select id="ageSelect" className="form-control">
+                  <select id="ageSelect" className="form-control" ref="ageSelect">
                     <option>18 and under</option>
                     <option>12 to 25</option>
                     <option>26 to 34</option>

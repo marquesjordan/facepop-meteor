@@ -3,7 +3,7 @@ import {ReadMore} from 'react-read-more';
 
 import Video from './common/Video.jsx';
 
-// Task component - represents a single todo item
+
 export default class Team extends Component {
   constructor(props) {
      super(props);

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Video from './common/Video.jsx';
 
-// Task component - represents a single todo item
+
 export default class Contact extends Component {
   constructor(props) {
      super(props);

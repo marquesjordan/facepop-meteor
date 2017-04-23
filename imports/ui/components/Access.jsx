@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import AccessMessage from './AccessMessage';
 import Corporate from './Corporate';
 
-// Task component - represents a single todo item
+
 export default class Access extends Component {
   handleSubmit(allAcessCode) {
     this.props.onAccessSubmit(allAcessCode);

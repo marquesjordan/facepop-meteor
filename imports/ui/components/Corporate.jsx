@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-// Task component - represents a single todo item
 export default class Corporate extends Component {
   handleSubmit(event) {
       event.preventDefault();

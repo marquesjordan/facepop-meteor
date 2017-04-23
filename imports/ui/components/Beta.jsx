@@ -4,36 +4,31 @@ import Join from './Join.jsx';
 import Corporate from './Corporate.jsx';
 import Thanks from './Thanks.jsx';
 
-// Task component - represents a single todo item
+
 export default class Beta extends Component {
 
   constructor(props) {
     super(props);
     this.handleJoinClick = this.handleJoinClick.bind(this);
-    this.handleCorpClick = this.handleCorpClick.bind(this);
-    this.onAccessSubmited = this.onAccessSubmited.bind(this);
+    this.renderBeta = this.renderBeta.bind(this);
     this.state = {
-      join: false,
-      corp: false
+      joined: false
     };
   }
 
-  onAccessSubmited(allAcessCode) {
-    this.props.onAccessSubmit(allAcessCode)
-  }
-
   handleJoinClick() {
-    this.setState({join: true, corp: false});
+    this.setState({joined: true});
   }
 
-  handleCorpClick() {
-    this.setState({corp: true, join: false});
+  renderBeta() {
+    if(this.state.joined) {
+      return <Thanks />;
+    }
+
+    return <Join handleJoinSubmit={this.handleJoinClick} />
   }
 
   render() {
-    const isJoin = this.state.join;
-    const isCorp = this.state.corp;
-
     return (
       <div className="beta-section">
       	<div className="container">
@@ -42,7 +37,7 @@ export default class Beta extends Component {
                 GET INVOLVED
             </div>
 
-            <Join />
+            {this.renderBeta()}
 
       		</div>
       	</div>
