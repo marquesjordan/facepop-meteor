@@ -67,7 +67,7 @@ export default class App extends Component {
         {this.state.isRestricted &&
           <Beta isRestricted={this.state.isRestricted}></Beta>
         }
-        {this.state.isRestricted &&
+        {!this.state.isRestricted &&
           <Survey questionCount={this.state.questionCount} onAnswerSubmit={this.handleAnswerClick}></Survey>
         }
         <Contact isRestricted={this.state.isRestricted}></Contact>
