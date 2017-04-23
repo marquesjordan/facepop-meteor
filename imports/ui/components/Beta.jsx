@@ -34,15 +34,6 @@ export default class Beta extends Component {
     const isJoin = this.state.join;
     const isCorp = this.state.corp;
 
-    let myForm = null;
-    if (isJoin) {
-      myForm = <Join />;
-    }
-
-    if (isCorp) {
-      myForm = <Corporate handleAccessFormSubmit={this.onAccessSubmited}/>;
-    }
-
     return (
       <div className="beta-section">
       	<div className="container">
@@ -51,26 +42,7 @@ export default class Beta extends Component {
                 GET INVOLVED
             </div>
 
-            <div className="row">
-              <div className="col-md-8 col-md-offset-2">
-
-                <div className="pad-bottom-lg">
-                  <div className="btn-group btn-group-justified" role="group" aria-label="...">
-                    <div className="btn-group" role="group">
-                      <button type="button" className="btn btn-primary" onClick={this.handleJoinClick}>Join The Group</button>
-                    </div>
-                    <div className="btn-group" role="group">
-                      <button type="button" className="btn btn-default" onClick={this.handleCorpClick}>All Access</button>
-                    </div>
-                  </div>
-                </div>
-
-
-
-              </div>
-            </div>
-
-            {myForm}
+            <Join />
 
       		</div>
       	</div>
