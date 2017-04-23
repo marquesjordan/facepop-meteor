@@ -1,18 +1,24 @@
 import React, { Component} from 'react';
 import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
 
 
 export default class SurveyQuestion extends Component {
   constructor(props) {
     super(props);
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
+  handleClick(event) {
+    this.props.onAnswerSubmit(event.target.innerText);
+  }
 
   renderAnswers() {
     return this.props.question.answers.map((answer) => (
-      <div className="row">
+      <div className="row" key={answer.answer}>
         <div className="col-sm-10 col-sm-offset-1">
-          <a className="survey-link"  onClick={this.props.onAnswerSubmit}>
+          <a className="survey-link" onClick={this.handleClick}>
             <div className="survey-btn">
               {answer.answer}
             </div>

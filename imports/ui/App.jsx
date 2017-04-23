@@ -9,6 +9,7 @@ import Team from './components/Team';
 import Contact from './components/Contact';
 import Beta from './components/Beta';
 import Survey from './components/Survey';
+import SaveSurvey from './components/SaveSurvey';
 
 // App component - represents the whole app
 export default class App extends Component {
@@ -18,10 +19,12 @@ export default class App extends Component {
     super(props);
     this.handleAllAccessSubmit = this.handleAllAccessSubmit.bind(this);
     this.handleAnswerClick = this.handleAnswerClick.bind(this);
+    this.handleSurvey = this.handleSurvey.bind(this);
 
     this.state = {
       isRestricted: true,
-      questionCount: 1
+      questionCount: 1,
+      userAnswers: []
     };
   }
 
@@ -33,9 +36,22 @@ export default class App extends Component {
     }
   }
 
-  handleAnswerClick(event) {
+  handleAnswerClick(answer) {
+    const arrayAnswers = this.state.userAnswers.slice();
+
+    arrayAnswers.push(answer)
+    this.setState({ userAnswers: arrayAnswers })
+
     const count = this.state.questionCount + 1;
     this.setState({questionCount: count});
+  }
+
+  handleSurvey() {
+    if(this.state.questionCount > 6) {
+      return(
+        <SaveSurvey surveyAnswers={this.state.userAnswers}></SaveSurvey>
+      )
+    }
   }
 
   render() {
@@ -48,9 +64,14 @@ export default class App extends Component {
           <Product isRestricted={this.state.isRestricted}></Product>
         }
         <Team isRestricted={this.state.isRestricted}></Team>
-        <Beta isRestricted={this.state.isRestricted}></Beta>
-        <Survey questionCount={this.state.questionCount} onAnswerSubmit={this.handleAnswerClick}></Survey>
+        {this.state.isRestricted &&
+          <Beta isRestricted={this.state.isRestricted}></Beta>
+        }
+        {this.state.isRestricted &&
+          <Survey questionCount={this.state.questionCount} onAnswerSubmit={this.handleAnswerClick}></Survey>
+        }
         <Contact isRestricted={this.state.isRestricted}></Contact>
+        {this.handleSurvey()}
       </div>
     );
   }

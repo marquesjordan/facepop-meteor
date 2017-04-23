@@ -71,6 +71,25 @@ export default class Survey extends Component {
     ));
   }
 
+  renderText() {
+    if(this.props.questionCount > this.renderQuestions().length) {
+      return (
+        <div>
+          <h3>Thank you for your input.</h3>
+          <h3>We will use this to make Facepop the #1 App.</h3>
+        </div>
+      );
+    }
+
+    return (
+      <div>
+        <h3>
+          Question {this.props.questionCount} of {this.renderQuestions().length}
+        </h3>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="survey-section">
@@ -80,8 +99,13 @@ export default class Survey extends Component {
               <div className="page-title">
                 Survey
               </div>
-              <div>
+              <div className="pad-bottom-lg">
                 {this.renderQuestions()}
+              </div>
+              <div className="pad-bottom-lg">
+                <h3>
+                  {this.renderText()}
+                </h3>
               </div>
             </div>
       		</div>
