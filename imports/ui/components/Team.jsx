@@ -140,50 +140,6 @@ export default class Team extends Component {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/maginfo.png" width="180" alt="..." />
-                    </a>
-                  </div>
-                  <div className="media-body">
-                    <h4 className="media-heading">UX/UI Engineers</h4>
-                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
-                      From custom integrations and mobile applications, to
-                      enterprise search and big data analytics, we bring a world-class
-                      experience to clients of all sizes, across dissimilar
-                      industries and all with unique needs.  With years of
-                      experience providing innovative custom data and development
-                      solutions, we only offer the highest quality custom solutions
-                      with the most modern product architectures, practices and
-                      technologies.
-                    </ReadMore>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-6">
-                <div className="media">
-                  <div className="media-left">
-                    <a href="#">
-                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/hs-new-logo.png" width="180" alt="..." />
-                    </a>
-                  </div>
-                  <div className="media-body">
-                    <h4 className="media-heading">Harrison Schaen</h4>
-                    <h4 className="media-heading">BUSINESS STRATEGIST &amp; CTO ADVISOR</h4>
-                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
-                      Harrison is a graduate of Princeton University with a concentration in Computer Science and
-                      English. Harrison has more than 5 years of web and application development experience.
-                      Currently, Harrison is at the helm of Issue Fixers, Inc. (web/app development services), Sr. Web
-                      Developer at Bask Digital Media and founder of OK Feed Me (mobile application; beta). Along
-                      with his virtuosities within the booming tech space, Harrison continues to exercise his multimedia
-                      marketing abilities, and business strategies for both small and large businesses that drive
-                      company growth and success.
-                    </ReadMore>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-6">
-                <div className="media">
-                  <div className="media-left">
-                    <a href="#">
                       <img src="https://s3-us-west-2.amazonaws.com/facepop/fp_logo_final.png" width="180" className="media-object img-rounded" />
                     </a>
                   </div>
@@ -262,6 +218,50 @@ export default class Team extends Component {
                       his professional and academic contributions, he has been the recipient of: CSUDH Student
                       Achievement Award, The CSUDH Outstanding Alumni Award and an American Institute of
                       Certified Public Accountants Achievement Award.
+                    </ReadMore>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-6">
+                <div className="media">
+                  <div className="media-left">
+                    <a href="#">
+                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/maginfo.png" width="180" alt="..." />
+                    </a>
+                  </div>
+                  <div className="media-body">
+                    <h4 className="media-heading">UX/UI Engineers</h4>
+                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
+                      From custom integrations and mobile applications, to
+                      enterprise search and big data analytics, we bring a world-class
+                      experience to clients of all sizes, across dissimilar
+                      industries and all with unique needs.  With years of
+                      experience providing innovative custom data and development
+                      solutions, we only offer the highest quality custom solutions
+                      with the most modern product architectures, practices and
+                      technologies.
+                    </ReadMore>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-6">
+                <div className="media">
+                  <div className="media-left">
+                    <a href="#">
+                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/hs-new-logo.png" width="180" alt="..." />
+                    </a>
+                  </div>
+                  <div className="media-body">
+                    <h4 className="media-heading">Harrison Schaen</h4>
+                    <h4 className="media-heading">BUSINESS STRATEGIST &amp; CTO ADVISOR</h4>
+                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
+                      Harrison is a graduate of Princeton University with a concentration in Computer Science and
+                      English. Harrison has more than 5 years of web and application development experience.
+                      Currently, Harrison is at the helm of Issue Fixers, Inc. (web/app development services), Sr. Web
+                      Developer at Bask Digital Media and founder of OK Feed Me (mobile application; beta). Along
+                      with his virtuosities within the booming tech space, Harrison continues to exercise his multimedia
+                      marketing abilities, and business strategies for both small and large businesses that drive
+                      company growth and success.
                     </ReadMore>
                   </div>
                 </div>

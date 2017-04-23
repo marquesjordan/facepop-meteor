@@ -24,7 +24,7 @@ export default class Access extends Component {
       	<div className="container">
 
       		<div className="row">
-            <div className="col-sm-4 col-sm-offset-8">
+            <div className="col-sm-4 col-sm-offset-4">
 
               {this.allAccessSection()}
 

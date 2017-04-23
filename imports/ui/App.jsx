@@ -57,7 +57,6 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Access isRestricted={this.state.isRestricted} onAccessSubmit={this.handleAllAccessSubmit}></Access>
         <Hero></Hero>
         <Slogan></Slogan>
         {!this.state.isRestricted &&
@@ -71,6 +70,7 @@ export default class App extends Component {
           <Survey questionCount={this.state.questionCount} onAnswerSubmit={this.handleAnswerClick}></Survey>
         }
         <Contact isRestricted={this.state.isRestricted}></Contact>
+        <Access isRestricted={this.state.isRestricted} onAccessSubmit={this.handleAllAccessSubmit}></Access>
         {this.handleSurvey()}
       </div>
     );
