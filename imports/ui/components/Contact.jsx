@@ -84,9 +84,6 @@ export default class Contact extends Component {
           	</div>
 
 
-
-
-
       		</div>
       	</div>
       </div>

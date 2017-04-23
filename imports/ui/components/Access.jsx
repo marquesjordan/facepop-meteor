@@ -15,7 +15,7 @@ export default class Access extends Component {
       return <AccessMessage />
     }
 
-    return <Corporate handleSubmit={this.handleSubmit.bind(this)}/>
+    return <Corporate handleSubmit={this.handleSubmit.bind(this)} errorMessage={this.props.errorMessage} />
   }
 
   render() {

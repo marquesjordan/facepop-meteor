@@ -24,7 +24,8 @@ export default class App extends Component {
     this.state = {
       isRestricted: true,
       questionCount: 1,
-      userAnswers: []
+      userAnswers: [],
+      errorMessage: ''
     };
   }
 
@@ -32,7 +33,9 @@ export default class App extends Component {
     const ALL_ACCESS_CODE = "100billion";
 
     if(allAcessCode === ALL_ACCESS_CODE) {
-      this.setState({isRestricted: false});
+      this.setState({isRestricted: false, errorMessage: ''});
+    } else {
+      this.setState({errorMessage: 'Wrong Password'})
     }
   }
 
@@ -70,7 +73,11 @@ export default class App extends Component {
           <Survey questionCount={this.state.questionCount} onAnswerSubmit={this.handleAnswerClick}></Survey>
         }
         <Contact isRestricted={this.state.isRestricted}></Contact>
-        <Access isRestricted={this.state.isRestricted} onAccessSubmit={this.handleAllAccessSubmit}></Access>
+        <Access
+          isRestricted={this.state.isRestricted}
+          onAccessSubmit={this.handleAllAccessSubmit}
+          errorMessage={this.state.errorMessage}
+        />
         {this.handleSurvey()}
       </div>
     );
