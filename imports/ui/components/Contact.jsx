@@ -63,7 +63,7 @@ export default class Contact extends Component {
           	<div className="copy-text">
           		USPTO/Patent Pending/File Serial No. 15/355,038
           	</div>
-          	<div className="footer-videos pad-bottom-lg">
+          	<div className={ this.props.isRestricted ? 'hide' : 'footer-videos pad-bottom-lg' }>
               <div className="row">
                 <div className="col-sm-4">
                   <Video video="51" isRestricted={this.props.isRestricted} ></Video>

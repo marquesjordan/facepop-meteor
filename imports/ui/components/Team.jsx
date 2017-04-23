@@ -56,7 +56,7 @@ export default class Team extends Component {
                     <h4 className="media-heading">Jerome Henry</h4>
                     <h4 className="media-heading">CO-FOUNDER &amp; COO</h4>
                     <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
-                      With 15 + combined years of consultative sales. management, technical resolution, and digital
+                      With 15 + combined years of consultative sales management, technical resolution, and digital
                       advertising expertise, Jerome Henry, affectionately known as “Jerry2.0” to those in contact with
                       him poses extraordinary decision-making, leadership and people skills. His experiences have
                       shaped him into a persuasive negotiator with a solid grasp of business operations - a truly
@@ -76,8 +76,8 @@ export default class Team extends Component {
                       flight) for some of the biggest internet retail brands (Speedo, Oakley, Ray Ban, Mrs Fields, Coffee
                       Bean, Harpers Bazaar, Tory Birch, DropCam, Car Fax, Papa John’s, SkyZone, Greystar,
                       FindLaw, Freeway Insurance &amp; many more) to deliver on every value propositions while hitting
-                      each client’s target objectives &amp; driving incremental value to their marketing mix - taking these
-                      brands from POCs &amp; test budget IOs to mature marketing spend. <br />
+                      each client’s target objectives &amp; driving incremental value to their marketingmix - taking these
+                      brands from POCs &amp; test budget IOs to mature marketing spend.<br />
                       As Facepop Co-Founder and operational strategist, Jerry lends his analytic, creative, and
                       operational talents as one of the visionaries overseeing and cultivating the company’s brand
                       development, strategic alliances, partnerships, and overall market positioning. Now, with the
@@ -88,6 +88,8 @@ export default class Team extends Component {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="row pad-bottom-lg">
               <div className="col-sm-6">
                 <div className="media">
                   <div className="media-left">
@@ -113,6 +115,37 @@ export default class Team extends Component {
                   </div>
                 </div>
               </div>
+              <div className="col-sm-6">
+                <div className="media">
+                  <div className="media-left">
+                    <a href="#">
+                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/fp_logo_final.png" width="180" alt="..." />
+                    </a>
+                  </div>
+                  <div className="media-body">
+                    <h4 className="media-heading">Strasser</h4>
+                    <h4 className="media-heading">SENIOR CTO ADVISOR</h4>
+                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
+                      Life started in Arizona where I spent the majority of my childhood on the golf course. After failing
+                      with my first start-up, the second one I was able to take my lessons learned and put them into
+                      practice. This lead to a small exit and enabled me to make the move over to Santa Monica in
+                      2011. In 2012 I co-founded WeezLabs (now Distillery), an award winning software development
+                      company, focused on building extraordinary companies from the ground up. In 2013, while
+                      running WeezLabs, I co-founded Curby (a SaaS valet parking company) which was aquired in
+                      January, 2015. As Distillery continues its growth, I have turned over the daily operations to my
+                      partner in September, 2016 to pursue my latest fintech start-up, Treasure.<br />
+                      Since the days of Palm Pilots, Sam has been solving everyday problems with elegant technology
+                      solutions. With three startups and two successful exits behind him, Sam is focused on
+                      technologies that are changing the landscape of mobile development.<br />
+                      Specialties: Business Strategy &amp; Development, fintech, finance, investing, Startups, Sales,
+                      Marketing, Mobile Technology, New Venture Development, P2P, Mobile Commerce, Sharing
+                      Economy, SaaS
+                    </ReadMore>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row pad-bottom-lg">
               <div className="col-sm-6">
                 <div className="media">
                   <div className="media-left">
@@ -151,7 +184,8 @@ export default class Team extends Component {
                       1996 as a tech support rep for a large ISP he quickly empathized with people having difficulty
                       using web applications that were less than user friendly. After running a tech support team for a
                       genealogy company in 2000, he branched off to become more proactive earlier in the software
-                      cycle where he has advocated for better quality products with nearly 20 years of software testing.
+                      cycle where he has advocated for better quality products with nearly 20 years of software testing.<br />
+
                       Tim has extensive experience in creating and running Quality Assurance Organizations, both
                       locally and abroad. Starting out as a manual tester at a handful of startups in the early 2000’s,
                       Tim landed at Citysearch (part of the IAC family) where he lead and eventually managed a team
@@ -170,6 +204,7 @@ export default class Team extends Component {
                       located across the UK, Germany, France, Bulgaria, Slovenia and Serbia. Upon returning to the
                       States, Tim worked for Connectivity, a startup located in Burbank, CA that was building a next-
                       gen marketing platform where he managed QA, Account Management and Customer Support. <br />
+
                       Tim is currently Director of QA at The Honest Company, while lending his breadth of knowledge
                       and experience to an all-star team at The Facepop Company, LLC., a mobile messaging tech
                       company aimed at changing the face of messaging around he globe!
@@ -177,6 +212,8 @@ export default class Team extends Component {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="row pad-bottom-lg">
               <div className="col-sm-6">
                 <div className="media">
                   <div className="media-left">
@@ -185,39 +222,28 @@ export default class Team extends Component {
                     </a>
                   </div>
                   <div className="media-body">
-                    <h4 className="media-heading">John Brown</h4>
-                    <h4 className="media-heading">CFO ADVISOR</h4>
+                    <h4 className="media-heading">Ben Thompson</h4>
+                    <h4 className="media-heading">SENIOR PROJECT MANAGER</h4>
                     <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
-                      John Brown, the founding and managing director of ABACO, is passionate and dedicated to the
-                      educational and professional development of entrepreneurs and community based organizations.
-                      He is recognized as a passionate mentor and teacher who enjoys giving his time to enhance the
-                      careers of many young urban professionals, executives and leaders.<br />
+                      Ben Thompson is a very seasoned and experienced senior level Project Manager. In the span of
+                      his 18 year career, he has managed projects in excess of $4,000,000 and as low as $100,000.
+                      His relevant experience and subject matter expertise lie in the areas of: Project Management,
+                      Project Management Office management, Product Management, Web Development
+                      Management, Mobile/Alternative Device application development, software/web application
+                      development, casual game development, UI/UX, Analytics, SEO, eCommerce, entertainment and
+                      client facing agency background, vendor management, budget analysis, and end to end technical
+                      documentation management.<br />
 
-                      John E. Brown has over 45 years of working experience in real estate, finance, and accounting.
-                      He began his professional career at Haskins &amp; Sells, where he became a Certified Public
-                      Accountant. In 1994, Brown joined The Bedford Group. In 2010, Brown created ABACO Partners,
-                      LLC, an advisory service firm organized to assist others in accessing capital. Brown is currently a
-                      shareholder, partner, director, and/or advisor to a number of profit oriented businesses,
-                      community and faith-based organizations.<br />
+                      He has led matrixed teams as large as 28 resources and cross-organizational project teams of
+                      35+ resources within the practice areas of: Design, QA, Front End Development, Backend/db
+                      development and Technical Architects. During his career, he’s held several official roles as:
+                      Director of Site Operations (NBC.com), Senior Project Manager, PMO Director, General
+                      Manager/Interactive and several consultant roles.<br />
 
-                      During his career Mr. Brown has developed apartments, condos, townhomes and single family
-                      homes including affordable, senior and market rate housing across the country. Throughout his
-                      professional career, Mr. Brown has also advised or assisted in the placement of equity and debt
-                      to a number of business enterprises, including but not limited to Founders National Bank, Bob
-                      Lott Productions, Honey’s Kettle, Gorilla Life, MATAH, Grenada Nutmeg Oil, The Tulsa Project,
-                      and Africa Trade Link and Expo.<br />
-
-                      From 2009 to present he has served as a director at Joseph Business School Los Angeles, a
-                      program for Christian entrepreneurs. Brown currently serves on the Social Entrepreneurship and
-                      Change Advisory Board for the Graduate School of Education and Psychology at Pepperdine
-                      University. Brown is also an active member of the Board of The Real Estate Associate Program
-                      (REAP), Los Angeles Chapter. Most recently, he joined the Board of Directors of Christian
-                      Foundation of the West, a Christian Community Foundation.<br />
-
-                      Mr. Brown is a graduate of California State University at Dominguez Hills (CSUDH). As a result of
-                      his professional and academic contributions, he has been the recipient of: CSUDH Student
-                      Achievement Award, The CSUDH Outstanding Alumni Award and an American Institute of
-                      Certified Public Accountants Achievement Award.
+                      He began his career with interactive newspapers/classified verticals and has spent the majority of
+                      his career in leadership roles within Entertainment/Media, Automotive, Ad Agency, start-up and
+                      corporate organizations. Mr. Thompson is excited to bring his expertise to The Facepop
+                      Company, LLC.
                     </ReadMore>
                   </div>
                 </div>
@@ -244,6 +270,8 @@ export default class Team extends Component {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="row pad-bottom-lg">
               <div className="col-sm-6">
                 <div className="media">
                   <div className="media-left">
