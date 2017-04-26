@@ -17,8 +17,16 @@ div p {
 	font-family: "Arial Rounded";
 	line-height: 1.4;
 }
+
 .active {
   display: block;
+}
+
+.show-modal{
+  background-color: rgba(255,255,255,.4);
+  background-image:url("http://www.babyshambles.net/images/shadow.png");
+  display: block;
+
 }
 
 .hide {

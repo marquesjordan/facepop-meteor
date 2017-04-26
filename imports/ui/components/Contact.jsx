@@ -24,7 +24,7 @@ export default class Contact extends Component {
 
           	<div>
           		<div className="main-text pad-bottom-sm">
-          			IN THE NEAR FUTURE, THE POWER OF FAST MESSAGING AND SHORT VIDEO WILL TRULY BE IN YOUR HANDS!
+          			THE POWER OF FAST MESSAGING AND SHORT VIDEO WILL TRULY BE IN YOUR HANDS!
           		</div>
           		<div className="main-text pad-bottom-sm">info@facepopme.com</div>
           	</div>
