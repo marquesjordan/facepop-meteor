@@ -31,6 +31,11 @@ export default class Access extends Component {
             </div>
       		</div>
 
+          <div className="copy-text pad-bottom-lg">
+            USPTO/Patent Pending/File Serial No. 15/355,038<br />
+            &copy; 2016 The Facepop Company, All Rights Reserved
+          </div>
+
       	</div>
       </div>
     );

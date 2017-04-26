@@ -25,13 +25,13 @@ export default class Join extends Component {
       <div className="join-form">
 
       		<div className="row pad-bottom-lg">
-            <div className="col-md-6 col-md-offset-3">
+            <div className="col-md-4 col-md-offset-4">
 
               <div className="main-text pad-bottom-lg">
                 SO YOU WANT TO BECOME ONE OF OUR EXCLUSIVE BETA TESTERS?
               </div>
 
-              <form onSubmit={this.handleSubmit.bind(this)}>
+              <form className="beta-form" onSubmit={this.handleSubmit.bind(this)}>
                 <div className="form-group">
                   <label htmlFor="email">Email</label>
                   <input type="email" className="form-control" id="email" ref="email" placeholder="Enter Your Email Address" />

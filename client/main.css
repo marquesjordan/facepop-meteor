@@ -76,6 +76,10 @@ div p {
   height: 95px;
 }
 
+.beta-form {
+  text-align: center;
+}
+
 .error-message {
   color: #FF0000;
 }

@@ -60,9 +60,6 @@ export default class Contact extends Component {
                 Fax: (310) 310 3502
               </h3>
           	</div>
-          	<div className="copy-text">
-          		USPTO/Patent Pending/File Serial No. 15/355,038
-          	</div>
           	<div className={ this.props.isRestricted ? 'hide' : 'footer-videos pad-bottom-lg' }>
               <div className="row">
                 <div className="col-sm-4">
@@ -78,9 +75,6 @@ export default class Contact extends Component {
 
 
 
-          	</div>
-          	<div className="copy-text">
-          		&copy; 2016 The Facepop Company, All Rights Reserved
           	</div>
 
 

@@ -9,18 +9,18 @@ export default class Corporate extends Component {
       this.props.handleSubmit(allAcessCode);
   }
 
+  handleBtnClick() {
+    debugger;
+  }
+
   render() {
     return (
-      <div>
-        <form className="form-inline" onSubmit={this.handleSubmit.bind(this)}>
-          <button type="submit" className="btn btn-default btn-access">All Access</button>
-          <div className="form-group">
-            <label className="sr-only" htmlFor="exampleInputPassword3">All Access</label>
-            <input type="password" className="form-control" ref="allAcessCode" id="exampleInputPassword3" placeholder="Password" />
-            <br /><span className="error-message">{this.props.errorMessage}</span>
-          </div>
-        </form>
-      </div>
+      <button type="submit"
+        onClick={this.handleBtnClick}
+        className="btn btn-default btn-access"
+      >
+        All Access
+      </button>
     );
   }
 }

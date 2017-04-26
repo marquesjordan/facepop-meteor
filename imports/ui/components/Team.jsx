@@ -25,7 +25,7 @@ export default class Team extends Component {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img src="https://s3-us-west-2.amazonaws.com/facepop/fp_logo_final.png" width="180" className="media-object img-rounded" />
+                      <img src="https://s3-us-west-2.amazonaws.com/facepop/facepop_logo_2017.png" width="180" className="media-object img-rounded" />
                     </a>
                   </div>
                   <div className="media-body">
@@ -49,7 +49,7 @@ export default class Team extends Component {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/fp_logo_final.png" width="180" alt="..." />
+                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/facepop_logo_2017.png" width="180" alt="..." />
                     </a>
                   </div>
                   <div className="media-body">
@@ -94,7 +94,7 @@ export default class Team extends Component {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img src="https://s3-us-west-2.amazonaws.com/facepop/fp_logo_final.png" width="180" className="media-object img-rounded" />
+                      <img src="https://s3-us-west-2.amazonaws.com/facepop/facepop_logo_2017.png" width="180" className="media-object img-rounded" />
                     </a>
                   </div>
                   <div className="media-body">
@@ -119,11 +119,11 @@ export default class Team extends Component {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/fp_logo_final.png" width="180" alt="..." />
+                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/facepop_logo_2017.png" width="180" alt="..." />
                     </a>
                   </div>
                   <div className="media-body">
-                    <h4 className="media-heading">Strasser</h4>
+                    <h4 className="media-heading"> Sam Strasser</h4>
                     <h4 className="media-heading">SENIOR CTO ADVISOR</h4>
                     <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
                       Life started in Arizona where I spent the majority of my childhood on the golf course. After failing
@@ -150,7 +150,7 @@ export default class Team extends Component {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/fp_logo_final.png" width="180" alt="..." />
+                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/facepop_logo_2017.png" width="180" alt="..." />
                     </a>
                   </div>
                   <div className="media-body">
@@ -173,7 +173,7 @@ export default class Team extends Component {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img src="https://s3-us-west-2.amazonaws.com/facepop/fp_logo_final.png" width="180" className="media-object img-rounded" />
+                      <img src="https://s3-us-west-2.amazonaws.com/facepop/facepop_logo_2017.png" width="180" className="media-object img-rounded" />
                     </a>
                   </div>
                   <div className="media-body">
@@ -218,7 +218,7 @@ export default class Team extends Component {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/fp_logo_final.png" width="180" alt="..." />
+                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/facepop_logo_2017.png" width="180" alt="..." />
                     </a>
                   </div>
                   <div className="media-body">
@@ -252,31 +252,7 @@ export default class Team extends Component {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/maginfo.png" width="180" alt="..." />
-                    </a>
-                  </div>
-                  <div className="media-body">
-                    <h4 className="media-heading">UX/UI Engineers</h4>
-                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
-                      From custom integrations and mobile applications, to
-                      enterprise search and big data analytics, we bring a world-class
-                      experience to clients of all sizes, across dissimilar
-                      industries and all with unique needs.  With years of
-                      experience providing innovative custom data and development
-                      solutions, we only offer the highest quality custom solutions
-                      with the most modern product architectures, practices and
-                      technologies.
-                    </ReadMore>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row pad-bottom-lg">
-              <div className="col-sm-6">
-                <div className="media">
-                  <div className="media-left">
-                    <a href="#">
-                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/hs-new-logo.png" width="180" alt="..." />
+                      <img className="media-object img-rounded" src="https://s3-us-west-2.amazonaws.com/facepop/facepop_logo_2017.png" width="180" alt="..." />
                     </a>
                   </div>
                   <div className="media-body">
@@ -295,7 +271,6 @@ export default class Team extends Component {
                 </div>
               </div>
             </div>
-
           </div>
       	</div>
       </div>
