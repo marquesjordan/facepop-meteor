@@ -22,11 +22,22 @@ div p {
   display: block;
 }
 
+.modal-dialog {
+  color: #000000;
+}
+
 .show-modal{
   background-color: rgba(255,255,255,.4);
   background-image:url("http://www.babyshambles.net/images/shadow.png");
   display: block;
+}
 
+.modal-body-container {
+  padding: 20px 40px;
+  /*border-bottom: 1px solid #E5E5E5;*/
+  height: 350px;
+  color: #000000;
+  overflow: scroll;
 }
 
 .hide {

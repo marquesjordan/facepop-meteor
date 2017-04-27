@@ -24,19 +24,12 @@ export default class App extends Component {
     this.state = {
       isRestricted: true,
       questionCount: 1,
-      userAnswers: [],
-      errorMessage: ''
+      userAnswers: []
     };
   }
 
-  handleAllAccessSubmit(allAcessCode) {
-    const ALL_ACCESS_CODE = "100billion";
-
-    if(allAcessCode === ALL_ACCESS_CODE) {
-      this.setState({isRestricted: false, errorMessage: ''});
-    } else {
-      this.setState({errorMessage: 'Wrong Password'})
-    }
+  handleAllAccessSubmit(isRestricted) {
+    setTimeout(function() { this.setState({isRestricted: isRestricted}); }.bind(this), 3000);
   }
 
   handleAnswerClick(answer) {

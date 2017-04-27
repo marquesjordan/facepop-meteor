@@ -4,10 +4,15 @@ import ReactDOM from 'react-dom';
 import AccessMessage from './AccessMessage';
 import Corporate from './Corporate';
 
-
 export default class Access extends Component {
-  handleSubmit(allAcessCode) {
-    this.props.onAccessSubmit(allAcessCode);
+  constructor(props) {
+    super(props);
+
+    this.handleSubmitAccess = this.handleSubmitAccess.bind(this);
+  }
+
+  handleSubmitAccess(isRestricted) {
+    this.props.onAccessSubmit(isRestricted);
   }
 
   allAccessSection() {
@@ -15,7 +20,7 @@ export default class Access extends Component {
       return <AccessMessage />
     }
 
-    return <Corporate handleSubmit={this.handleSubmit.bind(this)} errorMessage={this.props.errorMessage} />
+    return <Corporate handleSubmitAccess={this.handleSubmitAccess} errorMessage={this.props.errorMessage} />
   }
 
   render() {

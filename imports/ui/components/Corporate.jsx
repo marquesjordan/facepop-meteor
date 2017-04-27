@@ -12,13 +12,11 @@ export default class Corporate extends Component {
     };
 
     this.toggleModal = this.toggleModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(event) {
-      event.preventDefault();
-      const allAcessCode = ReactDOM.findDOMNode(this.refs.allAcessCode).value.trim();
-
-      this.props.handleSubmit(allAcessCode);
+  handleSubmit(isRestricted) {
+    this.props.handleSubmitAccess(isRestricted);
   }
 
   toggleModal(){
@@ -40,6 +38,7 @@ export default class Corporate extends Component {
           title="All Access"
           onCancel={this.toggleModal}
           cancelLabel="Cancel"
+          handleModalSubmit={this.handleSubmit}
         />
       </div>
 
