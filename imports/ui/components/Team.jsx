@@ -155,7 +155,7 @@ export default class Team extends Component {
                   </div>
                   <div className="media-body">
                     <h4 className="media-heading">Jerrold Thompson</h4>
-                    <h4 className="media-heading">SENIOR BRAND CONSULTANT AND BUSINESS DEVELOPMENT</h4>
+                    <h4 className="media-heading">SENIOR BRAND CONSULTANT &amp; BUSINESS DEVELOPMENT</h4>
                     <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
                       Jerrold Thompson comes to The Facepop Company, LLC as an accomplished, seasoned
                       branding professional. Jerrold’s comprehensive background in business development, brand
