@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 
+import { Vips } from '../../api/vip.js';
+
 export default class AccessModal extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       granted: false,
-      errorMessage: ''
+      errorMessage: '',
+      ip: ''
     }
   }
 
@@ -17,9 +20,9 @@ export default class AccessModal extends Component {
   }
 
   UserIP() {
-    return $.getJSON('http://ipinfo.io')
+    $.getJSON('http://ipinfo.io')
       .then((data) => {
-        console.log(data);
+        this.setState({ip: data.ip});
       });
   }
 
@@ -31,6 +34,14 @@ export default class AccessModal extends Component {
     const email = ReactDOM.findDOMNode(this.refs.email).value.trim();
 
     if(allAcessCode === ALL_ACCESS_CODE) {
+      const ip = this.state.ip;
+
+      Vips.insert({
+        email,
+        ip,
+        createdAt: new Date(), // current time
+      });
+
       this.setState({granted: true, errorMessage: ''});
 
       this.props.handleModalSubmit(false);
@@ -45,27 +56,38 @@ export default class AccessModal extends Component {
     if(this.state.granted) {
       return (
         <div className="text-center">
-          <h1>ACCESS GRANTED</h1>  
+          <h1>ACCESS GRANTED</h1>
         </div>
       )
     }
 
     return (
       <div>
-        <form className="beta-form" onSubmit={this.handleSubmit.bind(this)}>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input type="email" className="form-control" id="email" ref="email" placeholder="Enter Your Email Address" />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input type="password" className="form-control" ref="allAcessCode" id="password" placeholder="Password" />
-            <div className="error-message">
-              {this.state.errorMessage}
+        <div className="row">
+          <div className="col-md-10 col-md-offset-1">
+            <div className="text-left pad-bottom-lg">
+              By clicking on the "Submit" button you are agreeing to the terms provided herein.
             </div>
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
+        </div>
+        <div className="row">
+          <div className="col-md-6 col-md-offset-3">
+            <form className="beta-form" onSubmit={this.handleSubmit.bind(this)}>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input type="email" className="form-control" id="email" ref="email" placeholder="Enter Your Email Address" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <input type="password" className="form-control" ref="allAcessCode" id="password" placeholder="Password" />
+                <div className="error-message">
+                  {this.state.errorMessage}
+                </div>
+              </div>
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
     )
   }
@@ -122,11 +144,7 @@ export default class AccessModal extends Component {
 
             </div>
             <div className="modal-footer">
-              <div className="row">
-                <div className="col-md-6 col-md-offset-3">
-                  {this.renderFooter()}
-                </div>
-              </div>
+              {this.renderFooter()}
             </div>
           </div>
         </div>
