@@ -37,6 +37,7 @@ div p {
   /*border-bottom: 1px solid #E5E5E5;*/
   height: 350px;
   color: #000000;
+  text-align: left;
   overflow: scroll;
 }
 

@@ -44,7 +44,9 @@ export default class AccessModal extends Component {
   renderFooter() {
     if(this.state.granted) {
       return (
-        <div className="text-center"><h1>ACCESS GRANTED</h1></div>
+        <div className="text-center">
+          <h1>ACCESS GRANTED</h1>  
+        </div>
       )
     }
 
@@ -86,21 +88,36 @@ export default class AccessModal extends Component {
             </div>
             <div className="modal-body">
               <div className="modal-body-container">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper egestas elit et facilisis. Integer id turpis euismod, pulvinar metus ut, finibus sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec sodales et risus sed vestibulum. Praesent mi tellus, consectetur nec arcu at, molestie rhoncus leo. Donec eget malesuada urna. Vivamus sit amet bibendum diam. Maecenas tincidunt massa vel congue rutrum. Phasellus condimentum fermentum augue, et suscipit neque blandit vel. Vivamus aliquet mi ac semper aliquet. Nulla libero dolor, interdum non consequat et, tincidunt finibus dolor. Quisque id felis sit amet neque tincidunt facilisis at in ex. Mauris a efficitur ante, vel aliquet mauris. Etiam porta eleifend ex, eu dictum metus rutrum ut. Sed interdum sem interdum libero placerat, vitae rhoncus lacus vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                <p>DISCLAIMER NOTICE</p>
+                <p><br /></p>
+                <p>USPTO PATENT PENDING FILE SERIAL No. 15/355,038</p>
+                <p>THE FACEPOP COMPANY, LLC.&nbsp;</p>
+                <p>The information contained across this section of the website
+                  is confidential and proprietary to</p>
+                <p>Bervick J. Deculus II, and The Facepop Company, Inc.
+                  including potential employees, principals, family members,
+                  associates, subsidiaries, successors, and or assigns
+                  (collectively referred to as “App Company”) and is intended
+                  only for the persons to whom it is transmitted by the App
+                  Company or its representatives. Any reproduction of this
+                  document, in whole or in part, or the divulgence of any of
+                  its contents without the prior written consent of App Company,
+                  is prohibited.</p>
+                <p>The App Company filed a patent pending status and it does
+                  not imply and shall not be construed as an offering of
+                  securities. Prospective investors are not to construe the
+                  contents of this document as investment, legal or tax advice
+                  from either App Company or those that prepared this document.
+                  Any prospective investor should consult with professional
+                  investment advisors and gain professional legal and tax
+                  advice.</p>
+                <p>Each potential investor, consultant, independent contractor and/or employee specifically understands and agrees that any estimates, projections, revenue models, forecasts or assumptions are by definition uncertain and thus possibly unreliable. Any party considering a transaction with App Company agrees to look solely to its own diligence.</p>
 
-                Proin scelerisque euismod sapien id cursus. Sed mattis lobortis nibh quis sagittis. Fusce in arcu odio. Curabitur faucibus felis id arcu semper tempus. Nunc non porta urna. Nulla risus ante, ullamcorper id dui at, commodo ornare mi. Nunc mollis auctor dapibus. Nullam sit amet lacinia metus, a vulputate tellus. Donec sed ipsum sed nibh mollis sollicitudin vitae a purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque suscipit gravida nibh id mattis. Aliquam at pulvinar orci.
+                <p>Confidentiality Agreement: The recipient of this document acknowledges that the information provided by</p>
+                <p>App Company in this website is confidential. Therefore, the recipient of this document agrees not to disclose any of such information without the express written permission of App Company. Additionally; as said information is to be treated as confidential; any non-disclosure, confidentiality agreement, non-circumvention and/or other similar agreement by and between App Company and the recipient of this business plan shall be binding upon the parties with respect to the information contained in this website.</p>
 
-                In scelerisque, elit id elementum varius, felis mauris tristique felis, sit amet semper mauris ipsum et augue. Nullam sit amet odio feugiat, varius mauris fermentum, laoreet mi. Sed ac mi a justo tincidunt porta. Pellentesque pellentesque pellentesque vulputate. Sed at enim dictum, posuere nisl vel, bibendum lectus. Sed tincidunt dignissim malesuada. Nunc urna eros, ornare quis diam eget, commodo vestibulum eros. Sed tincidunt mi molestie, euismod turpis ut, blandit odio. Fusce id felis cursus, interdum orci quis, tincidunt felis. Morbi iaculis, purus vel sollicitudin consectetur, leo metus vulputate mi, sed aliquam nunc ligula a lorem. Ut imperdiet suscipit accumsan. Maecenas elementum pharetra velit, ac blandit augue laoreet vel.
-
-                Cras nec metus nisi. Ut ex nisi, imperdiet non justo in, consectetur tincidunt nisl. Aenean laoreet tortor lacus, at maximus lorem vulputate quis. Vestibulum placerat magna vitae diam porta, eget dignissim sem faucibus. Nam aliquam neque non enim pulvinar porttitor. Mauris nibh dui, aliquet a ligula at, iaculis condimentum sem. Cras a dui ut purus blandit tempus et vel lacus. Nulla vel ipsum velit. Quisque tempor ante lectus, mollis gravida risus finibus non.
-
-                Maecenas ac sem sit amet nunc ullamcorper luctus in vitae ipsum. Duis a aliquam purus. Duis pellentesque mi placerat auctor lacinia. Fusce vitae eleifend eros. Aliquam erat volutpat. Nam nec ultricies ex, dapibus consectetur nulla. Phasellus bibendum, augue et ultrices elementum, arcu ligula rhoncus dui, non convallis velit tortor non nibh. Etiam ut tortor tellus. Phasellus sed dolor mattis, convallis risus in, molestie sem. Duis dignissim elit sed purus blandit, tristique blandit ex rhoncus.
-
-                Nullam ac tincidunt nibh, ac suscipit ex. In fringilla purus at diam ornare, ac congue dui sodales. Vivamus vel dictum metus. Vivamus fringilla nisl nec ligula ultrices bibendum. Aliquam nec sem luctus, vulputate magna ut, dictum lacus. Proin ac bibendum lacus. Mauris porta euismod erat, eu ornare nibh placerat vel. Vivamus facilisis eu augue vel faucibus. Nunc eget neque dolor. Mauris aliquam diam a mi commodo posuere. Praesent velit felis, bibendum in interdum sit amet, faucibus sit amet nulla. In posuere egestas orci in dapibus.
-
-                Aenean interdum quam sit amet augue luctus, in fringilla sem consectetur. Nam et magna magna. Ut libero arcu, lacinia eu dapibus quis, elementum ut dolor. Aenean dolor nisi, imperdiet vitae sem sed, laoreet pharetra elit. Ut dolor tortor, sagittis quis mi vitae, faucibus dignissim massa. Suspendisse a gravida justo. Nullam egestas sit amet felis eget pharetra. Duis rhoncus augue vitae tellus dignissim tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Phasellus id lorem quis dolor sodales fermentum. Pellentesque et magna magna. Donec feugiat lacus sed consequat mollis. Sed non pretium dui. Fusce scelerisque fringilla ultricies. Cras nec ipsum erat.
-
-                Ut egestas, neque vitae fermentum lacinia, justo dolor maximus risus, vel luctus leo velit sed mi. Aliquam accumsan finibus est. Morbi hendrerit finibus metus, et fermentum risus euismod quis. In hac habitasse platea dictumst. Praesent a elementum est. Mauris laoreet ac neque tincidunt mattis. Fusce ultricies condimentum dolor, in suscipit risus pulvinar eu. Fusce erat nisi, hendrerit non aliquet quis, convallis nec turpis. Sed mattis efficitur justo nec luctus. Mauris vitae aliquam elit. Duis nec tortor egestas, pulvinar nunc sed, sagittis sapien. Phasellus mollis dui in molestie egestas.
+                <p>In receipt of the App Company's "All Access" invite, it is hereby acknowledge by the invitee that the information furnished in this website is in all respects confidential in nature (other than such information which is already in the public domain through other means) and that any disclosure or use of same by the undersigned may cause serious harm or damage to App Company.</p>
+                <p><br /></p>
               </div>
 
             </div>
