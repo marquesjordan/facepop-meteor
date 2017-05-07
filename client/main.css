@@ -18,12 +18,21 @@ div p {
 	line-height: 1.4;
 }
 
+#login-buttons {
+  margin-top: 15px;
+  margin-left: 40px;
+}
+
 .active {
   display: block;
 }
 
 .modal-dialog {
   color: #000000;
+}
+
+.addInvestorInput {
+  margin: 0 7px;
 }
 
 .show-modal{
@@ -69,6 +78,10 @@ div p {
   font-size: 136px;
   text-align: center;
   color: #4B88D3;
+}
+
+.nav-icon {
+  width: 20px;
 }
 
 .media-left,

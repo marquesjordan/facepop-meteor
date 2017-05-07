@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
+import { createContainer } from 'meteor/react-meteor-data';
 
 import { Vips } from '../../api/vip.js';
+import { Investors } from '../../api/investors.js';
 
-export default class AccessModal extends Component {
+class AccessModal extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       granted: false,
       errorMessage: '',
-      ip: ''
+      ip: '',
+      isInvestor: false
     }
+
+    this.checkInvestor = this.checkInvestor.bind(this);
   }
 
   componentDidMount() {
@@ -26,6 +31,17 @@ export default class AccessModal extends Component {
       });
   }
 
+  checkInvestor(email) {
+    var emailItem = this.props.investors.filter( (item) => {
+      return item.email === email;
+    })
+    if(emailItem.length > 0) {
+      return true;
+    }
+
+    return false;
+  }
+
   handleSubmit(event) {
     const ALL_ACCESS_CODE = "100billion";
 
@@ -33,7 +49,7 @@ export default class AccessModal extends Component {
     const allAcessCode = ReactDOM.findDOMNode(this.refs.allAcessCode).value.trim();
     const email = ReactDOM.findDOMNode(this.refs.email).value.trim();
 
-    if(allAcessCode === ALL_ACCESS_CODE) {
+    if(allAcessCode === ALL_ACCESS_CODE && this.checkInvestor(email)) {
       const ip = this.state.ip;
 
       Vips.insert({
@@ -152,3 +168,11 @@ export default class AccessModal extends Component {
     );
   }
 }
+
+export default createContainer(() => {
+  Meteor.subscribe('investors');
+
+  return {
+    investors: Investors.find({}).fetch()
+  }
+}, AccessModal);
