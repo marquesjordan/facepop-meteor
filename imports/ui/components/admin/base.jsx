@@ -22,7 +22,7 @@ export default class Base extends Component {
    }
 
    handleShowStats(event) {
-     if(Meteor.userId() && Meteor.user().username === 'marques') {
+     if(Meteor.userId() && Meteor.user().username === 'facepop_admin') {
        this.setState({isAdmin: true, errorMessage: ""});
      } else {
        this.setState({errorMessage: "You Do Not Have Proper Credentials"})
