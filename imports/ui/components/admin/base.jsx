@@ -8,6 +8,7 @@ import VipAccess from './VipAccess.jsx';
 import VipAccessList from './VipAccessList.jsx';
 
 
+
 export default class Base extends Component {
 
   constructor(props) {
@@ -51,6 +52,8 @@ export default class Base extends Component {
                   	</li>
                   	<li><a href="#2" data-toggle="tab">VIP Log</a>
                   	</li>
+                  	<li><a href="#3" data-toggle="tab">Survey Results</a>
+                  	</li>
                   </ul>
 
                 	<div className="tab-content ">
@@ -61,6 +64,9 @@ export default class Base extends Component {
                 		<div className="tab-pane" id="2">
                       <VipGuest />
                 		</div>
+                    <div className="tab-pane" id="3">
+dddd
+                    </div>
                 	</div>
                 </div>
               }

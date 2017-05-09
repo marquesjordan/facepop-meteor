@@ -1,74 +1,74 @@
 import React, { Component } from 'react';
+import { createContainer } from 'meteor/react-meteor-data';
 import SurveyQuestion from './SurveyQuestions.jsx';
+import { Questions } from '../../api/questions.js';
 
 
-export default class Survey extends Component {
+class Survey extends Component {
   constructor(props) {
      super(props);
   }
 
   getQuestions() {
     return [
-      { _id: 1, question: 'Would you download this upcoming free mobile application?',
+      { question: 'Would you download this upcoming free mobile application?',
         answers: [
-          {answer: 'A: Yes'},
-          {answer: 'B: No'},
-          {answer: 'C: Most Likely'},
-          {answer: 'D: Probably Not'},
+          {answer: 'A: Yes', count: 0},
+          {answer: 'B: No', count: 0},
+          {answer: 'C: Most Likely', count: 0},
+          {answer: 'D: Probably Not', count: 0},
         ]
       },
-      { _id: 2, question: 'Which is a better fit for Facepop?',
+      { question: 'Which is a better fit for Facepop?',
         answers: [
-          {answer: 'A: A Plug-in Feature Tied to an Existing App'},
-          {answer: 'B: A Default Feature Built in Phones (like emojis)'},
-          {answer: 'C: A Free Mobile App'},
+          {answer: 'A: A Plug-in Feature Tied to an Existing App', count: 0},
+          {answer: 'B: A Default Feature Built in Phones (like emojis)', count: 0},
+          {answer: 'C: A Free Mobile App', count: 0},
         ]
       },
-      { _id: 3, question: 'Is Facepop better for public use or exclusive for celebrities?',
+      { question: 'Is Facepop better for public use or exclusive for celebrities?',
         answers: [
-          {answer: 'A: Public Use'},
-          {answer: 'B: Celebrities'},
-          {answer: 'C: Both A and B'},
-          {answer: 'D: I don’t know'},
+          {answer: 'A: Public Use', count: 0},
+          {answer: 'B: Celebrities', count: 0},
+          {answer: 'C: Both A and B', count: 0},
+          {answer: 'D: I don’t know', count: 0},
         ]
       },
-      { _id: 4, question: 'In your opinion, which time length would you recommend for your snappy Facepop message?',
+      { question: 'In your opinion, which time length would you recommend for your snappy Facepop message?',
         answers: [
-          {answer: 'A: 3-5 seconds'},
-          {answer: 'B: 5-7 seconds'},
-          {answer: 'C: 7-10 seconds'},
-          {answer: 'D: All of the Above (optional)'},
+          {answer: 'A: 3-5 seconds', count: 0},
+          {answer: 'B: 5-7 seconds', count: 0},
+          {answer: 'C: 7-10 seconds', count: 0},
+          {answer: 'D: All of the Above (optional)', count: 0},
         ]
       },
-      { _id: 5, question: 'In your opinion, how much is one celebrity Facepop worth to you?',
+      { question: 'In your opinion, how much is one celebrity Facepop worth to you?',
         answers: [
-          {answer: 'A: Free to .49'},
-          {answer: 'B: .49 to .99'},
-          {answer: 'C: .99 to $1.49'},
-          {answer: 'D: $1.49 to $1.99'},
-          {answer: 'E: None of the Above'},
+          {answer: 'A: Free to .49', count: 0},
+          {answer: 'B: .49 to .99', count: 0},
+          {answer: 'C: .99 to $1.49', count: 0},
+          {answer: 'D: $1.49 to $1.99', count: 0},
+          {answer: 'E: None of the Above', count: 0},
         ]
       },
-      { _id: 6, question: 'How much assistance would you provide when creating your personalized Facepop message?',
+      { question: 'How much assistance would you provide when creating your personalized Facepop message?',
         answers: [
-          {answer: 'A: None to Little'},
-          {answer: 'B: Little to Medium'},
-          {answer: 'C: Medium to High'},
-          {answer: 'D: None (100% Crop Automation)'},
+          {answer: 'A: None to Little', count: 0},
+          {answer: 'B: Little to Medium', count: 0},
+          {answer: 'C: Medium to High', count: 0},
+          {answer: 'D: None (100% Crop Automation)', count: 0},
         ]
       },
     ];
   }
 
   renderQuestions() {
-    return this.getQuestions().map((question) => (
-      <SurveyQuestion
-        key={question._id}
-        question={question}
-        questionCount={this.props.questionCount}
-        onAnswerSubmit={this.props.onAnswerSubmit}
-      />
-    ));
+    if(Questions.find({}).count() === 0) {
+      this.getQuestions().map((question) => {
+        Questions.insert(question);
+        console.log('done');
+      });
+    }
   }
 
   renderText() {
@@ -114,3 +114,11 @@ export default class Survey extends Component {
     );
   }
 }
+
+export default createContainer(() => {
+  Meteor.subscribe('questions');
+
+  return {
+    questions: Questions.find({}).fetch()
+  }
+}, Survey);
