@@ -32,7 +32,7 @@ export default class BaseMain extends Component {
     setTimeout(function() { this.setState({isRestricted: isRestricted}); }.bind(this), 3000);
   }
 
-  handleAnswerClick(answer) {
+  handleAnswerClick(answer, question) {
     const arrayAnswers = this.state.userAnswers.slice();
 
     arrayAnswers.push(answer)

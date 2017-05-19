@@ -11,10 +11,10 @@ export default class SurveyQuestion extends Component {
   }
 
   handleClick(event) {
-    this.props.onAnswerSubmit(event.target.innerText);
+    this.props.onAnswerSubmit(event.target.innerText, this.props.question.question);
   }
 
-  renderAnswers() {
+  renderAnswers(name) {
     return this.props.question.answers.map((answer) => (
       <div className="row" key={answer.answer}>
         <div className="col-sm-10 col-sm-offset-1">
@@ -25,7 +25,7 @@ export default class SurveyQuestion extends Component {
           </a>
         </div>
       </div>
-    ));
+    ), {name: name});
   }
 
   render() {
@@ -33,7 +33,7 @@ export default class SurveyQuestion extends Component {
       <div className={this.props.questionCount === this.props.question._id ? 'active' : 'hidden'}>
         <div className="question-section">
           <h2 className="pad-bottom-lg">{this.props.question.question}</h2>
-          {this.renderAnswers()}
+          {this.renderAnswers(this.props.question.question)}
         </div>
       </div>
     );
