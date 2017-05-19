@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { ReactPivot } from 'react-pivot';
 
 import NavBar from './navbar.jsx';
 import SurveyResults from './SurveyResults.jsx';
