@@ -5,6 +5,7 @@ import Access from './Access';
 import Hero from './Hero';
 import Slogan from './Slogan';
 import Product from './Product';
+import Brand from './Brand';
 import Team from './Team';
 import Contact from './Contact';
 import Beta from './Beta';
@@ -58,6 +59,8 @@ export default class BaseMain extends Component {
         {!this.state.isRestricted &&
           <Product isRestricted={this.state.isRestricted}></Product>
         }
+        <Brand isRestricted={this.state.isRestricted}></Brand>
+        
         <Team isRestricted={this.state.isRestricted}></Team>
         {this.state.isRestricted &&
           <Beta isRestricted={this.state.isRestricted}></Beta>

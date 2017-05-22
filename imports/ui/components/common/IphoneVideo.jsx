@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-export default class Video extends Component {
+export default class IphoneVideo extends Component {
   playPause(id) {
     // debugger;
     const clicked_video = `video${id}`;
@@ -26,14 +26,13 @@ export default class Video extends Component {
 
 
     return(
-      <div className={ this.props.isRestricted ? 'hide' : 'product-video-container pad-bottom-lg' }>
-        <div className="video-mask">
-          <video poster={poster} id={videoId} className="contact-video-footer">
-            <source src={videoSrc} type="video/mp4" />
-            Your browser does not support HTML5 video.
-          </video>
-          <img id={this.props.video} ref={this.props.video} className="play-button product-video-play-image" onClick={this.playPause.bind(this, this.props.video)} src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png" />
-        </div>
+      <div className="iphone-video-container">
+        <img src="https://s3-us-west-2.amazonaws.com/facepop/iphone_frame_2.png" className="phone-image" />
+        <video poster={poster} id={videoId} className="iphone-video">
+          <source src={videoSrc} type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+        <img id={this.props.video} ref={this.props.video} className="iphone-video-play-btn" onClick={this.playPause.bind(this, this.props.video)} src="https://s3-us-west-2.amazonaws.com/facepop/play-button.png" />
       </div>
     );
   }
