@@ -16,7 +16,6 @@ import SaveSurvey from './SaveSurvey';
 // App component - represents the whole app
 export default class BaseMain extends Component {
 
-
  constructor(props) {
     super(props);
     this.handleAllAccessSubmit = this.handleAllAccessSubmit.bind(this);

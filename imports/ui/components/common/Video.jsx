@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 
 export default class Video extends Component {
   playPause(id) {
-    // debugger;
     const clicked_video = `video${id}`;
     const myVideo = document.getElementById(clicked_video);
     const controllerImage = document.getElementById(id);

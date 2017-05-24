@@ -14,7 +14,7 @@ export default class Peer extends Component {
       	<div className="container">
       		<div className="row">
 
-            <div className="page-title">
+            <div className="page-sub-title corp-title">
               PEER-TO-PEER
             </div>
 
