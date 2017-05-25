@@ -15,7 +15,7 @@ export default class Brand extends Component {
     var settings = {
       arrows: true,
       dots: true,
-      infinite: true,
+      infinite: false,
       autoplay: false,
       speed: 2500,
       slidesToShow: 1,

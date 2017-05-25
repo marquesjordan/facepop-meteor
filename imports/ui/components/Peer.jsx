@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Slider from 'react-slick';
 
 import Video from './common/Video.jsx';
 
@@ -9,6 +10,17 @@ export default class Peer extends Component {
   }
 
   render() {
+
+    var settings = {
+      arrows: true,
+      dots: true,
+      infinite: false,
+      autoplay: false,
+      speed: 2500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
     return (
       <div className="product-section">
       	<div className="container">
@@ -19,43 +31,28 @@ export default class Peer extends Component {
             </div>
 
             <div className="row pad-bottom-lg">
-              <div className="col-xs-4">
-                <div className="product-video-group">
-                  <div className="product-video-group__item">
-                    <Video video="204" />
-                  </div>
+              <Slider {...settings}>
+
+                <div>
+                  <Video video="204" />
                 </div>
-              </div>
-              <div className="col-xs-4">
-                <div className="product-video-group__item">
+                <div>
                   <Video video="205" />
                 </div>
-              </div>
-              <div className="col-xs-4">
-                <div className="product-video-group__item pad-bottom-lg">
+                <div>
                   <Video video="206" />
                 </div>
-              </div>
-            </div>
 
-            <div className="row pad-bottom-lg">
-              <div className="col-xs-4">
-                <div className="product-video-group">
-                  <div className="product-video-group__item">
-                    <Video video="207" />
-                  </div>
+                <div>
+                  <Video video="207" />
                 </div>
-              </div>
-              <div className="col-xs-4">
-                <div className="product-video-group__item">
+                <div>
                   <Video video="208" />
                 </div>
-              </div>
-              <div className="col-xs-4">
-                <div className="product-video-group__item pad-bottom-lg">
+                <div>
                   <Video video="209" />
                 </div>
-              </div>
+              </Slider>
             </div>
 
       		</div>
