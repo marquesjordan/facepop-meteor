@@ -30,7 +30,7 @@ export default class SurveyQuestion extends Component {
 
   render() {
     return (
-      <div className={this.props.questionCount === this.props.question._id ? 'active' : 'hidden'}>
+      <div>
         <div className="question-section">
           <h2 className="pad-bottom-lg">{this.props.question.question}</h2>
           {this.renderAnswers(this.props.question.question)}

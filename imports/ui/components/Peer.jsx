@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 
 import Video from './common/Video.jsx';
-
+import IphoneVideo from './common/IphoneVideo.jsx';
 
 export default class Peer extends Component {
   constructor(props) {
@@ -22,11 +22,11 @@ export default class Peer extends Component {
     };
 
     return (
-      <div className="product-section">
+      <div className="product-section pad-bottom-lg">
       	<div className="container">
       		<div className="row">
 
-            <div className="page-sub-title corp-title">
+            <div className="page-sub-title corp-title pad-bottom-lg">
               PEER-TO-PEER
             </div>
 
@@ -34,23 +34,23 @@ export default class Peer extends Component {
               <Slider {...settings}>
 
                 <div>
-                  <Video video="204" />
+                  <IphoneVideo video="204" />
                 </div>
                 <div>
-                  <Video video="205" />
+                  <IphoneVideo video="205" />
                 </div>
                 <div>
-                  <Video video="206" />
+                  <IphoneVideo video="206" />
                 </div>
 
                 <div>
-                  <Video video="207" />
+                  <IphoneVideo video="207" />
                 </div>
                 <div>
-                  <Video video="208" />
+                  <IphoneVideo video="208" />
                 </div>
                 <div>
-                  <Video video="209" />
+                  <IphoneVideo video="209" />
                 </div>
               </Slider>
             </div>

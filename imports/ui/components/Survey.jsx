@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 import SurveyQuestion from './SurveyQuestions.jsx';
+import Slider from 'react-slick';
 
 export default class Survey extends Component {
   constructor(props) {
      super(props);
+
+     this.next = this.next.bind(this)
+  }
+
+  next() {
+    debugger;
+    this.slider.slickNext();
+    this.props.onAnswerSubmit();
   }
 
   getQuestions() {
@@ -61,12 +70,15 @@ export default class Survey extends Component {
 
   renderQuestions() {
     return this.getQuestions().map((question) => (
-      <SurveyQuestion
-        key={question._id}
-        question={question}
-        questionCount={this.props.questionCount}
-        onAnswerSubmit={this.props.onAnswerSubmit}
-      />
+      <div>
+        <SurveyQuestion
+          key={question._id}
+          question={question}
+          questionCount={this.props.questionCount}
+          onAnswerSubmit={this.next}
+        />
+      </div>
+
     ));
   }
 
@@ -90,6 +102,16 @@ export default class Survey extends Component {
   }
 
   render() {
+    var settings = {
+      arrows: false,
+      dots: false,
+      infinite: false,
+      autoplay: false,
+      speed: 2500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
     return (
       <div className="survey-section">
       	<div className="container">
@@ -99,7 +121,9 @@ export default class Survey extends Component {
                 Survey
               </div>
               <div className="pad-bottom-lg">
-                {this.renderQuestions()}
+                <Slider ref={c => this.slider = c } {...settings}>
+                  {this.renderQuestions()}
+                </Slider>
               </div>
               <div className="pad-bottom-lg">
                 <h3>

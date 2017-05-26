@@ -26,7 +26,7 @@ export default class Brand extends Component {
       <div className="product-section">
       	<div className="container">
       		<div className="row">
-            <div className="page-sub-title corp-title">
+            <div className="page-sub-title corp-title pad-bottom-lg">
               CORPORATE BRANDS
             </div>
 

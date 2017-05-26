@@ -40,7 +40,7 @@ export default class Product extends Component {
                         Greetings
                       </li>
                       <li>
-                        Dramatic and Comical Expressions
+                        Facial Expressions
                       </li>
                       <li>
                         Well Wishes

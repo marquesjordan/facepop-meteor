@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import {ReadMore} from 'react-read-more';
 
 import Video from './common/Video.jsx';
+import ReadMore from './common/ReadMore.jsx';
 
 
 export default class Team extends Component {

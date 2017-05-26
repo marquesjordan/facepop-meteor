@@ -70,7 +70,7 @@ export default class Base extends Component {
                         <VipGuest />
                       </div>
                       <div className="tab-pane" id="3a">
-                        ddd
+                        Coming soon!
                       </div>
                     </div>
                   </div>
