@@ -121,6 +121,15 @@ div p {
   overflow: scroll;
 }
 
+.slick-next:before,
+.slick-prev:before {
+  font-size: 60px;
+}
+
+.more-less {
+  font-size: 30px;
+}
+
 .hide {
   display: none;
 }
