@@ -6,10 +6,10 @@ export default class IphoneVideo extends Component {
     const clicked_video = `video${id}`;
     const myVideo = document.getElementById(clicked_video);
     const controllerImage = document.getElementById(id);
-    debugger;
+
     if (myVideo.paused) {
-        $(".slick-active").find("video")[0].play()
-        $(".slick-active").find('#'+id).hide();
+      myVideo.play();
+      $('#'+id).hide();
     }
 
     myVideo.onended = function() {

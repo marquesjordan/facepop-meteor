@@ -10,7 +10,6 @@ export default class Survey extends Component {
   }
 
   next() {
-    debugger;
     this.slider.slickNext();
     this.props.onAnswerSubmit();
   }
