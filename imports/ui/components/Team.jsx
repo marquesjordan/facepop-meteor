@@ -1,12 +1,46 @@
 import React, { Component } from 'react';
 
 import Video from './common/Video.jsx';
-import ReadMore from './common/ReadMore.jsx';
 
 
 export default class Team extends Component {
   constructor(props) {
      super(props);
+  }
+
+  componentDidMount() {
+    // Configure/customize these variables.
+    var showChar = 180;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "+";
+    var lesstext = "-";
+
+    $('.more').each(function() {
+      var content = $(this).html();
+
+      if(content.length > showChar) {
+        var c = content.substr(0, showChar);
+        var h = content.substr(showChar, content.length - showChar);
+
+        var html = c + '<span class="moreellipses">' + ellipsestext+ '</span><span class="morecontent"><span class="morecontent-hide">' + h + '</span><a href="" class="morelink">' + moretext + '</a></span>';
+
+        $(this).html(html);
+      }
+    });
+
+    $(".morelink").click(function(){
+      if($(this).hasClass("less")) {
+        $(this).removeClass("less");
+        $(this).html(moretext);
+      } else {
+        $(this).addClass("less");
+        $(this).html(lesstext);
+      }
+      $(this).parent().prev().toggle();
+      $(this).prev().toggle();
+      return false;
+    });
+
   }
 
   render() {
@@ -31,7 +65,7 @@ export default class Team extends Component {
                   <div className="media-body">
                     <h4 className="media-heading">Bervick J. Deculus II</h4>
                     <h4 className="media-heading">FOUNDER &amp; CEO</h4>
-                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
+                    <span className="more">
                       Founder of The Facepop Company, LLC. and wildly motivated in offering a new communication
                       tool that elevates today’s messaging experience around the globe. Bervick is an independent
                       businessman for over 15 years with upwards of 20,000 hours in project management for
@@ -41,7 +75,7 @@ export default class Team extends Component {
                       ultimately a team player and a natural creator. Bervick’s visionary gifts maintain his creations to
                       remain ahead of pop culture trends, and truly manage to taste make with an unmatched level of
                       meticulosity. Bervick is a graduate of Howard University with a BA in Communications.
-                    </ReadMore>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -55,7 +89,7 @@ export default class Team extends Component {
                   <div className="media-body">
                     <h4 className="media-heading">Jerome Henry</h4>
                     <h4 className="media-heading">CO-FOUNDER &amp; COO</h4>
-                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
+                    <span className="more">
                       With 15 + combined years of consultative sales management, technical resolution, and digital
                       advertising expertise, Jerome Henry, affectionately known as “Jerry2.0” to those in contact with
                       him poses extraordinary decision-making, leadership and people skills. His experiences have
@@ -84,7 +118,7 @@ export default class Team extends Component {
                       business savvy of a seasoned entrepreneur, Mr. Henry has set his sights on making The
                       Facepop Company a globally recognized symbol of excellence and achievement in the ever-
                       expanding world of mobile messaging and digital media.
-                    </ReadMore>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -100,7 +134,7 @@ export default class Team extends Component {
                   <div className="media-body">
                     <h4 className="media-heading">Kareem Grimes</h4>
                     <h4 className="media-heading">CO-FOUNDER &amp; DIRECTOR OF BUSINESS AND CREATIVE DEVELOPMENT</h4>
-                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
+                    <span className="more">
                       Kareem upholds the creative direction and partnership development for the The Facepop
                       Company, LLC.  Kareem, a 20 year seasoned actor, services major companies like, Samsung,
                       AT&amp;T and Mountain Dew, as an event consultant and brand ambassador. Whether for sales,
@@ -111,7 +145,7 @@ export default class Team extends Component {
                       development, marketing and building strategic partnerships to accelerate Facepop&#39;s growth can
                       only come with ease. Kareem Grimes is a graduate of Cal State Los Angeles with a BA in
                       Broadcast Journalism and Radio TV &amp; Film.
-                    </ReadMore>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -125,7 +159,7 @@ export default class Team extends Component {
                   <div className="media-body">
                     <h4 className="media-heading"> Sam Strasser</h4>
                     <h4 className="media-heading">SENIOR CTO ADVISOR</h4>
-                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
+                    <span className="more">
                       Life started in Arizona where I spent the majority of my childhood on the golf course. After failing
                       with my first start-up, the second one I was able to take my lessons learned and put them into
                       practice. This lead to a small exit and enabled me to make the move over to Santa Monica in
@@ -140,7 +174,7 @@ export default class Team extends Component {
                       Specialties: Business Strategy &amp; Development, fintech, finance, investing, Startups, Sales,
                       Marketing, Mobile Technology, New Venture Development, P2P, Mobile Commerce, Sharing
                       Economy, SaaS
-                    </ReadMore>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -156,7 +190,7 @@ export default class Team extends Component {
                   <div className="media-body">
                     <h4 className="media-heading">Jerrold Thompson</h4>
                     <h4 className="media-heading">SENIOR BRAND CONSULTANT &amp; BUSINESS DEVELOPMENT</h4>
-                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
+                    <span className="more">
                       Jerrold Thompson comes to The Facepop Company, LLC as an accomplished, seasoned
                       branding professional. Jerrold’s comprehensive background in business development, brand
                       management and marketing is expressed by his innate ability to compartmentalize and “see
@@ -165,7 +199,7 @@ export default class Team extends Component {
                       results. Programs designed for The Walt Disney Company, BET, Universal Music Group, Def
                       Jam Recordings, MTV, Sony BMG Music Entertainment and hosts of others have utilized
                       Jerrold’s dynamic vision of converging digital and traditional media marketing.
-                    </ReadMore>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -179,7 +213,7 @@ export default class Team extends Component {
                   <div className="media-body">
                     <h4 className="media-heading">Tim Peysar</h4>
                     <h4 className="media-heading">SENIOR QA DIRECTOR</h4>
-                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
+                    <span className="more">
                       Tim Peysar has over 20 years of experience in the internet industry. Having started out humbly in
                       1996 as a tech support rep for a large ISP he quickly empathized with people having difficulty
                       using web applications that were less than user friendly. After running a tech support team for a
@@ -207,8 +241,8 @@ export default class Team extends Component {
 
                       Tim is currently Director of QA at The Honest Company, while lending his breadth of knowledge
                       and experience to an all-star team at The Facepop Company, LLC., a mobile messaging tech
-                      company aimed at changing the face of messaging around he globe!
-                    </ReadMore>
+                      company aimed at changing the face of messaging around the globe!
+                    </span>
                   </div>
                 </div>
               </div>
@@ -224,7 +258,7 @@ export default class Team extends Component {
                   <div className="media-body">
                     <h4 className="media-heading">Ben Thompson</h4>
                     <h4 className="media-heading">SENIOR PROJECT MANAGER</h4>
-                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
+                    <span className="more">
                       Ben Thompson is a very seasoned and experienced senior level Project Manager. In the span of
                       his 18 year career, he has managed projects in excess of $4,000,000 and as low as $100,000.
                       His relevant experience and subject matter expertise lie in the areas of: Project Management,
@@ -244,7 +278,7 @@ export default class Team extends Component {
                       his career in leadership roles within Entertainment/Media, Automotive, Ad Agency, start-up and
                       corporate organizations. Mr. Thompson is excited to bring his expertise to The Facepop
                       Company, LLC.
-                    </ReadMore>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -258,7 +292,7 @@ export default class Team extends Component {
                   <div className="media-body">
                     <h4 className="media-heading">Harrison Schaen</h4>
                     <h4 className="media-heading">BUSINESS STRATEGIST &amp; CTO ADVISOR</h4>
-                    <ReadMore lines={4} onShowMore={this.props.onChange} text="more">
+                    <span className="more">
                       Harrison is a graduate of Princeton University with a concentration in Computer Science and
                       English. Harrison has more than 5 years of web and application development experience.
                       Currently, Harrison is at the helm of Issue Fixers, Inc. (web/app development services), Sr. Web
@@ -266,7 +300,7 @@ export default class Team extends Component {
                       with his virtuosities within the booming tech space, Harrison continues to exercise his multimedia
                       marketing abilities, and business strategies for both small and large businesses that drive
                       company growth and success.
-                    </ReadMore>
+                    </span>
                   </div>
                 </div>
               </div>

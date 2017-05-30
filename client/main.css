@@ -56,6 +56,12 @@ div p {
   color: #000000;
 }
 
+.morecontent-hide {
+    display: none;
+}
+.morelink {
+}
+
 .addInvestorInput {
   margin: 0 7px;
 }
@@ -123,7 +129,7 @@ div p {
 
 .slick-next:before,
 .slick-prev:before {
-  font-size: 60px;
+  font-size: 90px;
 }
 
 .more-less {
