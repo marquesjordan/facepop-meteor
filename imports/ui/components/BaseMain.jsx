@@ -34,10 +34,12 @@ export default class BaseMain extends Component {
   }
 
   handleAnswerClick(answer, question) {
+    let curQA;
     const arrayAnswers = this.state.userAnswers.slice();
 
-    arrayAnswers.push(answer)
-    this.setState({ userAnswers: arrayAnswers })
+    curQA = {question: question, answer: answer};
+    arrayAnswers.push(curQA)
+    this.setState({ userAnswers: arrayAnswers });
 
     const count = this.state.questionCount + 1;
     this.setState({questionCount: count});

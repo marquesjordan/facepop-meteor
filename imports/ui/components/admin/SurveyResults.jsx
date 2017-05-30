@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 import { createContainer } from 'meteor/react-meteor-data';
 import { Surveys } from '../../../../imports/api/surveys.js';
-
+import { Questions } from '../../../api/questions.js';
+import ResultList from './ResultList.jsx';
+import SurveyResultList from './SurveyResultList.jsx';
 
 class SurveyResults extends Component {
 
@@ -17,35 +19,30 @@ class SurveyResults extends Component {
   }
 
   getResults() {
-    this.resultTotals = {
-      question1: 0,
-      question2: 0,
-      question3: 0,
-      question4: 0,
-      question5: 0,
-      question6: 0
-    }
-
-    const total = this.props.surveys.length;
-
-    this.h = this.props.surveys.map( (item) => {
-      return 1+1;
-    })
-
+    debugger;
+    return questions.map( (item) => {
+      <div key={item._id}>
+        text
+        <ResultList item={item} />
+      </div>
+    });
   }
 
   render() {
-
     return (
-      <div>Hi {this.getResults()}</div>
+      <div className="container">
+        {this.getResults()}
+      </div>
     )
   }
 }
 
 export default createContainer(() => {
   Meteor.subscribe('surveys');
+  Meteor.subscribe('questions');
 
   return {
+    questions: Questions.find({}).fetch(),
     surveys: Surveys.find({}).fetch()
   }
 }, SurveyResults);

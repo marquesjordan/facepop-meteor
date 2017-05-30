@@ -10,9 +10,10 @@ export default class Survey extends Component {
      this.next = this.next.bind(this)
   }
 
-  next() {
-    this.slider.slickNext();
-    this.props.onAnswerSubmit();
+  next(answer, question) {
+  
+    this.props.onAnswerSubmit(answer, question);
+
   }
 
   getQuestions() {
@@ -124,9 +125,7 @@ export default class Survey extends Component {
                 <Video video="161" isRestricted={this.props.isRestricted} />
               </div>
               <div className="pad-bottom-lg">
-                <Slider ref={c => this.slider = c } {...settings}>
                   {this.renderQuestions()}
-                </Slider>
               </div>
               <div className="pad-bottom-lg">
                 <h3>
