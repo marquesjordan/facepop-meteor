@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SurveyQuestion from './SurveyQuestions.jsx';
 import Slider from 'react-slick';
+import Video from './common/Video.jsx';
 
 export default class Survey extends Component {
   constructor(props) {
@@ -118,6 +119,9 @@ export default class Survey extends Component {
             <div className="col-sm-8 col-sm-offset-2">
               <div className="page-title">
                 Survey
+              </div>
+              <div>
+                <Video video="161" isRestricted={this.props.isRestricted} />
               </div>
               <div className="pad-bottom-lg">
                 <Slider ref={c => this.slider = c } {...settings}>

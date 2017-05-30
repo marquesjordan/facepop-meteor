@@ -129,7 +129,7 @@ div p {
 
 .slick-next:before,
 .slick-prev:before {
-  font-size: 90px;
+  font-size: 90px !important;
 }
 
 .more-less {
