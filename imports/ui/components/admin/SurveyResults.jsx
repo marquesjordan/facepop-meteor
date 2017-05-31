@@ -14,24 +14,28 @@ class SurveyResults extends Component {
     this.getResults = this.getResults.bind(this);
   }
 
-  componentDidMount() {
-
-  }
-
-  getResults() {
-    debugger;
+  getResults(questions) {
     return questions.map( (item) => {
-      <div key={item._id}>
-        text
-        <ResultList item={item} />
-      </div>
+      return (
+        <tbody key={item._id}>
+          <ResultList item={item} />
+        </tbody>
+      )
     });
   }
 
   render() {
     return (
-      <div className="container">
-        {this.getResults()}
+      <div className="">
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Answer</th>
+            </tr>
+          </thead>
+          {this.getResults(this.props.questions)}
+        </table>
       </div>
     )
   }

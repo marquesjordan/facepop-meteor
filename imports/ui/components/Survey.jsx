@@ -11,7 +11,7 @@ export default class Survey extends Component {
   }
 
   next(answer, question) {
-  
+
     this.props.onAnswerSubmit(answer, question);
 
   }
@@ -122,7 +122,7 @@ export default class Survey extends Component {
                 Survey
               </div>
               <div>
-                <Video video="161" isRestricted={this.props.isRestricted} />
+                <Video video="210" isRestricted={this.props.isRestricted} />
               </div>
               <div className="pad-bottom-lg">
                   {this.renderQuestions()}
