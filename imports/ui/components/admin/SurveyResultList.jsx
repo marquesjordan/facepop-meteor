@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 
 export default class SurveyResultList extends Component {
   constructor(props) {
-    debugger;
     super(props);
   }
 
   render() {
-    debugger;
     return (
       <div>
         <div className="row" key={this.props.item._id}>
