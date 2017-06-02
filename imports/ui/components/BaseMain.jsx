@@ -72,7 +72,11 @@ export default class BaseMain extends Component {
           <Beta isRestricted={this.state.isRestricted}></Beta>
         }
         {!this.state.isRestricted &&
-          <Survey questionCount={this.state.questionCount} onAnswerSubmit={this.handleAnswerClick}></Survey>
+          <Survey
+            questionCount={this.state.questionCount}
+            onAnswerSubmit={this.handleAnswerClick}
+            isRestricted={this.state.isRestricted}
+          />
         }
         <Contact isRestricted={this.state.isRestricted}></Contact>
         <Access

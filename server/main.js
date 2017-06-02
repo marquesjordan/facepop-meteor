@@ -4,6 +4,7 @@ import {Surveys} from '../imports/api/surveys.js';
 import {Vips} from '../imports/api/vip.js';
 import { Investors } from '../imports/api/investors.js';
 import { Questions } from '../imports/api/questions.js';
+import { Answers } from '../imports/api/answers.js';
 
 Meteor.startup(() => {
   // code to run on server at startup
@@ -19,5 +20,8 @@ Meteor.startup(() => {
   });
   Meteor.publish('questions', function() {
     return Questions.find({});
+  });
+  Meteor.publish('answers', function() {
+    return Answers.find({});
   });
 });

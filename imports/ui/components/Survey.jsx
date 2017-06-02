@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { createContainer } from 'meteor/react-meteor-data';
+import { Answers } from '../../api/answers.js';
+
 import SurveyQuestion from './SurveyQuestions.jsx';
 import Slider from 'react-slick';
 import Video from './common/Video.jsx';
 
-export default class Survey extends Component {
+class Survey extends Component {
   constructor(props) {
      super(props);
 
@@ -70,6 +73,16 @@ export default class Survey extends Component {
   }
 
   renderQuestions() {
+    if(this.props.answers.length < 1) {
+      this.getQuestions().map( (question) => {
+          let quest = question.question;
+          question.answers.map( (answer) => {
+            Answers.insert({question: quest, answer: answer.answer, count: answer.count})
+          }, quest)
+      })
+    }
+
+
     return this.getQuestions().map((question) => (
       <div>
         <SurveyQuestion
@@ -139,3 +152,11 @@ export default class Survey extends Component {
     );
   }
 }
+
+export default createContainer((props) => {
+  Meteor.subscribe('answers');
+
+  return {
+    answers: Answers.find({}).fetch()
+  }
+}, Survey);
