@@ -35,12 +35,7 @@ export default class Contact extends Component {
           			data-action="like"
           			data-show-faces="true">
           		</div>
-          		<a href="https://www.facebook.com/facepopapp/" className="social-links" target="_blank"><img src="https://s3-us-west-2.amazonaws.com/facepop/social/icon_facebook.png" width="75" className="social-link-icon" /></a>
-          		<a href="https://twitter.com/FacepopApp" className="social-links" target="_blank"><img src="https://s3-us-west-2.amazonaws.com/facepop/social/icon_twitter.png" className="social-link-icon" /></a>
-          		<a href="https://www.instagram.com/facepopapp/" className="social-links" target="_blank"><img src="https://s3-us-west-2.amazonaws.com/facepop/social/icon_instagram.png" className="social-link-icon" /></a>
-          		<a href="https://www.pinterest.com/facepopcompany/" className="social-links" target="_blank"><img src="https://s3-us-west-2.amazonaws.com/facepop/social/icon_pinterest.png" className="social-link-icon" /></a>
-          		<a href="https://plus.google.com/u/0/112716641914283714321/posts" className="social-links" target="_blank"><img src="https://s3-us-west-2.amazonaws.com/facepop/social/icon_google_plus.png" className="social-link-icon" /></a>
-          	</div>
+          </div>
           	<div className="main-text">
               <h1>
                 GEOFFREY A. WEG<br />
