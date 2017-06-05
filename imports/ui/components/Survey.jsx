@@ -73,11 +73,11 @@ class Survey extends Component {
   }
 
   renderQuestions() {
-    if(this.props.answers.length < 1) {
+    if(this.props.answers.length < 1 && this.props.answers.length <= 24) {
       this.getQuestions().map( (question) => {
           let quest = question.question;
           question.answers.map( (answer) => {
-            Answers.insert({question: quest, answer: answer.answer, count: answer.count})
+            
           }, quest)
       })
     }
@@ -97,7 +97,7 @@ class Survey extends Component {
   }
 
   renderText() {
-    if(this.props.questionCount > this.renderQuestions().length) {
+    if(this.props.questionCount > this.getQuestions().length) {
       return (
         <div>
           <h3>Thank you for your input.</h3>
@@ -109,7 +109,7 @@ class Survey extends Component {
     return (
       <div>
         <h3>
-          Question {this.props.questionCount} of {this.renderQuestions().length}
+          Question {this.props.questionCount} of {this.getQuestions().length}
         </h3>
       </div>
     );

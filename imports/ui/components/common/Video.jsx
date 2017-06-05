@@ -27,7 +27,7 @@ export default class Video extends Component {
     return(
       <div className={ this.props.isRestricted ? 'hide' : 'product-video-container pad-bottom-lg' }>
         <div className="video-mask">
-          <video preload="auto" poster={poster} id={videoId} className="contact-video-footer">
+          <video poster={poster} id={videoId} className="contact-video-footer">
             <source src={videoSrc} type="video/mp4" />
             Your browser does not support HTML5 video.
           </video>
