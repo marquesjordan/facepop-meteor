@@ -53,7 +53,7 @@ export default class Product extends Component {
                   </div>
                   <div className="product-video-group">
                     <div className="product-video-group__item">
-                      <Video video="105" isRestricted={this.props.isRestricted} ></Video>
+                      <Video video="401" isRestricted={this.props.isRestricted} ></Video>
                     </div>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ export default class Product extends Component {
                     <p className="product-questions">ARE THEY PHOTOS?</p>
                   </div>
                   <div className="product-video-group__item">
-                    <Video video="83" isRestricted={this.props.isRestricted} ></Video>
+                    <Video video="402" isRestricted={this.props.isRestricted} ></Video>
                   </div>
                 </div>
                 <div className="col-xs-4">
@@ -100,7 +100,7 @@ export default class Product extends Component {
                   <div className="product-video-group__item pad-bottom-lg">
 
 
-                    <Video video="40" isRestricted={this.props.isRestricted} ></Video>
+                    <Video video="403" isRestricted={this.props.isRestricted} ></Video>
                   </div>
                 </div>
               </div>

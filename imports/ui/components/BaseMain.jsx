@@ -62,10 +62,10 @@ export default class BaseMain extends Component {
           <Product isRestricted={this.state.isRestricted}></Product>
         }
         {!this.state.isRestricted &&
-          <Brand isRestricted={this.state.isRestricted}></Brand>
+          <Peer isRestricted={this.state.isRestricted}></Peer>
         }
         {!this.state.isRestricted &&
-          <Peer isRestricted={this.state.isRestricted}></Peer>
+          <Brand isRestricted={this.state.isRestricted}></Brand>
         }
         <Team isRestricted={this.state.isRestricted}></Team>
         {this.state.isRestricted &&

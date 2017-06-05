@@ -63,13 +63,13 @@ export default class Contact extends Component {
           	<div className={ this.props.isRestricted ? 'hide' : 'footer-videos pad-bottom-lg' }>
               <div className="row">
                 <div className="col-sm-4">
-                  <Video video="51" isRestricted={this.props.isRestricted} ></Video>
+                  <Video video="405" isRestricted={this.props.isRestricted} ></Video>
                 </div>
                 <div className="col-sm-4">
-                   <Video video="38" isRestricted={this.props.isRestricted} ></Video>
+                   <Video video="406" isRestricted={this.props.isRestricted} ></Video>
                 </div>
                 <div className="col-sm-4">
-                   <Video video="135" isRestricted={this.props.isRestricted} ></Video>
+                   <Video video="407" isRestricted={this.props.isRestricted} ></Video>
                 </div>
               </div>
 

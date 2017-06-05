@@ -135,7 +135,7 @@ class Survey extends Component {
                 Survey
               </div>
               <div>
-                <Video video="22" isRestricted={this.props.isRestricted} />
+                <Video video="404" isRestricted={this.props.isRestricted} />
               </div>
               <div className="pad-bottom-lg">
                   {this.renderQuestions()}
