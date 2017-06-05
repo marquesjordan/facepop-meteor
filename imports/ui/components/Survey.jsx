@@ -11,12 +11,43 @@ class Survey extends Component {
      super(props);
 
      this.next = this.next.bind(this)
+     this.getAnswerList = this.getAnswerList.bind(this);
+     this.getQuestions = this.getQuestions.bind(this);
   }
 
   next(answer, question) {
 
     this.props.onAnswerSubmit(answer, question);
 
+  }
+
+  getAnswerList() {
+    return [
+          {question: "Would you download this upcoming free mobile application?", answer: "A: Yes", count: 0},
+          {question: "Would you download this upcoming free mobile application?", answer: "B: No", count: 0},
+          {question: "Would you download this upcoming free mobile application?", answer: "C: Most Likely", count: 0},
+          {question: "Would you download this upcoming free mobile application?", answer: "D: Probably Not", count: 0},
+          {question: "Which is a better fit for Facepop?", answer: "A: A Plug-in Feature Tied to an Existing App", count: 0},
+          {question: "Which is a better fit for Facepop?", answer: "B: A Default Feature Built in Phones (like emojis)", count: 0},
+          {question: "Which is a better fit for Facepop?", answer: "C: A Free Mobile App", count: 0},
+          {question: "Is Facepop better for public use or exclusive for celebrities?", answer: "A: Public Use", count: 0},
+          {question: "Is Facepop better for public use or exclusive for celebrities?", answer: "B: Celebrities", count: 0},
+          {question: "Is Facepop better for public use or exclusive for celebrities?", answer: "C: Both A and B", count: 0},
+          {question: "Is Facepop better for public use or exclusive for celebrities?",answer: "D: I don’t know", count: 0},
+          {question: "In your opinion, which time length would you recommend for your snappy Facepop message?", answer: "A: 3-5 seconds", count: 0},
+          {question: "In your opinion, which time length would you recommend for your snappy Facepop message?", answer: "B: 5-7 seconds", count: 0},
+          {question: "In your opinion, which time length would you recommend for your snappy Facepop message?", answer: "C: 7-10 seconds", count: 0},
+          {question: "In your opinion, which time length would you recommend for your snappy Facepop message?", answer: "D: All of the Above (optional)", count: 0},
+          {question: "In your opinion, how much is one celebrity Facepop worth to you?", answer: "A: Free to .49", count: 0},
+          {question: "In your opinion, how much is one celebrity Facepop worth to you?", answer: "B: .49 to .99", count: 0},
+          {question: "In your opinion, how much is one celebrity Facepop worth to you?", answer: "C: .99 to $1.49", count: 0},
+          {question: "In your opinion, how much is one celebrity Facepop worth to you?", answer: "D: $1.49 to $1.99", count: 0},
+          {question: "In your opinion, how much is one celebrity Facepop worth to you?", answer: "E: None of the Above", count: 0},
+          {question: "How much assistance would you provide when creating your personalized Facepop message?", answer: "A: None to Little", count: 0},
+          {question: "How much assistance would you provide when creating your personalized Facepop message?", answer: "B: Little to Medium", count: 0},
+          {question: "How much assistance would you provide when creating your personalized Facepop message?", answer: "C: Medium to High", count: 0},
+          {question: "How much assistance would you provide when creating your personalized Facepop message?", answer: "D: None (100% Crop Automation)", count: 0},
+    ];
   }
 
   getQuestions() {
@@ -73,12 +104,9 @@ class Survey extends Component {
   }
 
   renderQuestions() {
-    if(this.props.answers.length < 1 && this.props.answers.length <= 24) {
-      this.getQuestions().map( (question) => {
-          let quest = question.question;
-          question.answers.map( (answer) => {
-            
-          }, quest)
+    if(this.props.answers.length < 1) {
+      this.getAnswerList().map( (answer) => {
+        Answers.insert(answer);
       })
     }
 

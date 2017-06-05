@@ -24,4 +24,7 @@ Meteor.startup(() => {
   Meteor.publish('answers', function() {
     return Answers.find({});
   });
+  Meteor.publish('emails', function() {
+    return Emails.find({});
+  });
 });

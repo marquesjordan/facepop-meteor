@@ -6,6 +6,7 @@ import SurveyResults from './SurveyResults.jsx';
 import VipGuest from './VipGuest.jsx';
 import VipAccess from './VipAccess.jsx';
 import VipAccessList from './VipAccessList.jsx';
+import BetaList from './BetaList.jsx';
 
 
 
@@ -58,6 +59,8 @@ export default class Base extends Component {
                     	</li>
                     	<li><a href="#3a" data-toggle="tab">Survey Results</a>
                     	</li>
+                    	<li><a href="#4a" data-toggle="tab">Beta Testers</a>
+                    	</li>
                     </ul>
                   </div>
                   <div className="panel-body">
@@ -71,6 +74,9 @@ export default class Base extends Component {
                       </div>
                       <div className="tab-pane" id="3a">
                         <SurveyResults />
+                      </div>
+                      <div className="tab-pane" id="4a">
+                        <BetaList />
                       </div>
                     </div>
                   </div>
