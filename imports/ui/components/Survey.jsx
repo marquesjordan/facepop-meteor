@@ -112,9 +112,8 @@ class Survey extends Component {
 
 
     return this.getQuestions().map((question) => (
-      <div>
+      <div key={question._id}>
         <SurveyQuestion
-          key={question._id}
           question={question}
           questionCount={this.props.questionCount}
           onAnswerSubmit={this.next}
@@ -154,6 +153,8 @@ class Survey extends Component {
       slidesToScroll: 1
     };
 
+    const surveyStyle = {top: '-76px', left: '-78px'};
+
     return (
       <div className="survey-section">
       	<div className="container">
@@ -163,7 +164,7 @@ class Survey extends Component {
                 Survey
               </div>
               <div>
-                <Video video="404" isRestricted={this.props.isRestricted} />
+                <Video video="404" isRestricted={this.props.isRestricted} vidStyle={surveyStyle} />
               </div>
               <div className="pad-bottom-lg">
                   {this.renderQuestions()}

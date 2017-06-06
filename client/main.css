@@ -132,6 +132,14 @@ div p {
   font-size: 90px !important;
 }
 
+.slick-next:before {
+  content: '>' !important;
+}
+
+.slick-prev:before {
+  content: '<' !important;
+}
+
 .more-less {
   font-size: 30px;
 }

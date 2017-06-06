@@ -9,6 +9,11 @@ export default class Product extends Component {
   }
 
   render() {
+    const product1Style = {top: '-73px', left: '-83px'};
+    const product2Style = {top: '-73px', left: '-75px'};
+    const product3Style = {top: '-73px', left: '-65px'};
+    const product4Style = {top: '-70px', left: '-70px'};
+
     return (
       <div className="product-section">
       	<div className="container">
@@ -17,7 +22,7 @@ export default class Product extends Component {
               PRODUCT
             </div>
 
-            <Video video="25" isRestricted={this.props.isRestricted} ></Video>
+            <Video video="25" isRestricted={this.props.isRestricted} vidStyle={product1Style} />
 
             <div className="product-content pad-bottom-lg">
             	<div className="main-text pad-bottom-sm">
@@ -53,7 +58,7 @@ export default class Product extends Component {
                   </div>
                   <div className="product-video-group">
                     <div className="product-video-group__item">
-                      <Video video="401" isRestricted={this.props.isRestricted} ></Video>
+                      <Video video="401" isRestricted={this.props.isRestricted} vidStyle={product2Style} />
                     </div>
                   </div>
                 </div>
@@ -76,7 +81,7 @@ export default class Product extends Component {
                     <p className="product-questions">ARE THEY PHOTOS?</p>
                   </div>
                   <div className="product-video-group__item">
-                    <Video video="402" isRestricted={this.props.isRestricted} ></Video>
+                    <Video video="402" isRestricted={this.props.isRestricted} vidStyle={product3Style} />
                   </div>
                 </div>
                 <div className="col-xs-4">
@@ -100,7 +105,7 @@ export default class Product extends Component {
                   <div className="product-video-group__item pad-bottom-lg">
 
 
-                    <Video video="403" isRestricted={this.props.isRestricted} ></Video>
+                    <Video video="403" isRestricted={this.props.isRestricted} vidStyle={product4Style} />
                   </div>
                 </div>
               </div>

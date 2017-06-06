@@ -44,6 +44,8 @@ export default class Team extends Component {
   }
 
   render() {
+    const teamStyle = {top: '-76px', left: '-78px'};
+
     return (
       <div className="team-section">
       	<div className="container">
@@ -52,7 +54,7 @@ export default class Team extends Component {
             		TEAM
           	</div>
 
-            <Video video="29" isRestricted={this.props.isRestricted} ></Video>
+            <Video video="29" isRestricted={this.props.isRestricted} vidStyle={teamStyle} />
 
             <div className="row pad-bottom-lg">
               <div className="col-sm-6">

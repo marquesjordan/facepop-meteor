@@ -6,9 +6,14 @@ import Video from './common/Video.jsx';
 export default class Contact extends Component {
   constructor(props) {
      super(props);
-  }q
+  }
 
   render() {
+    const contact1Style = {top: '-76px', left: '-65px'};
+    const contact2Style = {top: '-76px', left: '-70px'};
+    const contact3Style = {top: '-76px', left: '-74px'};
+    const contact4Style = {top: '-76px', left: '-65px'};
+
     return (
       <div className="contact-section">
       	<div className="container">
@@ -19,7 +24,7 @@ export default class Contact extends Component {
             		CONTACT
           	</div>
           	<div className="pad-bottom-lg">
-          		 <Video video="75" isRestricted={this.props.isRestricted} ></Video>
+          		 <Video video="75" isRestricted={this.props.isRestricted} vidStyle={contact1Style} />
             </div>
 
           	<div>
@@ -58,13 +63,13 @@ export default class Contact extends Component {
           	<div className={ this.props.isRestricted ? 'hide' : 'footer-videos pad-bottom-lg' }>
               <div className="row">
                 <div className="col-sm-4">
-                  <Video video="405" isRestricted={this.props.isRestricted} ></Video>
+                  <Video video="405" isRestricted={this.props.isRestricted} vidStyle={contact2Style} />
                 </div>
                 <div className="col-sm-4">
-                   <Video video="406" isRestricted={this.props.isRestricted} ></Video>
+                   <Video video="406" isRestricted={this.props.isRestricted} vidStyle={contact3Style} />
                 </div>
                 <div className="col-sm-4">
-                   <Video video="407" isRestricted={this.props.isRestricted} ></Video>
+                   <Video video="407" isRestricted={this.props.isRestricted} vidStyle={contact4Style} />
                 </div>
               </div>
 
