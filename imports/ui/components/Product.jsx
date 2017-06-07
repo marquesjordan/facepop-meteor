@@ -10,9 +10,9 @@ export default class Product extends Component {
 
   render() {
     const product1Style = {top: '-73px', left: '-83px'};
-    const product2Style = {top: '-73px', left: '-75px'};
-    const product3Style = {top: '-73px', left: '-65px'};
-    const product4Style = {top: '-70px', left: '-70px'};
+    const product2Style = {top: '-76px', left: '-75px'};
+    const product3Style = {top: '-76px', left: '-65px'};
+    const product4Style = {top: '-75px', left: '-70px'};
 
     return (
       <div className="product-section">

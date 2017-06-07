@@ -24,7 +24,7 @@ export default class Contact extends Component {
             		CONTACT
           	</div>
           	<div className="pad-bottom-lg">
-          		 <Video video="75" isRestricted={this.props.isRestricted} vidStyle={contact1Style} />
+          		 <Video video="408" isRestricted={this.props.isRestricted} vidStyle={contact1Style} />
             </div>
 
           	<div>
