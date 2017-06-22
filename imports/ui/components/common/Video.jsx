@@ -27,12 +27,12 @@ export default class Video extends Component {
     const videoId = `video${this.props.video}`;
     const videoSrc = `https://s3-us-west-2.amazonaws.com/facepop/video/video-${this.props.video}.mp4`;
     const videoSrcWebm = `https://s3-us-west-2.amazonaws.com/facepop/video/video-${this.props.video}.webm`;
-    
+
 
     return(
       <div className={ this.props.isRestricted ? 'hide' : 'product-video-container pad-bottom-lg' }>
         <div className="video-mask">
-          <video poster={poster} id={videoId} style={this.props.vidStyle} className="contact-video-footer">
+          <video preload="none" poster={poster} id={videoId} style={this.props.vidStyle} className="contact-video-footer">
             <source src={videoSrcWebm} type="video/webm" />
             <source src={videoSrc} type="video/mp4" />
             Your browser does not support HTML5 video.

@@ -26,7 +26,7 @@ export default class IphoneVideo extends Component {
     return(
       <div className="iphone-video-container">
         <div>
-          <video poster={poster} id={videoId} className="iphone-video">
+          <video preload="none" poster={poster} id={videoId} className="iphone-video">
             <source src={videoSrc} type="video/mp4" />
             Your browser does not support HTML5 video.
           </video>
