@@ -15,8 +15,7 @@ import SaveSurvey from './SaveSurvey';
 
 // App component - represents the whole app
 export default class BaseMain extends Component {
-
- constructor(props) {
+  constructor(props) {
     super(props);
     this.handleAllAccessSubmit = this.handleAllAccessSubmit.bind(this);
     this.handleAnswerClick = this.handleAnswerClick.bind(this);
@@ -30,60 +29,41 @@ export default class BaseMain extends Component {
   }
 
   handleAllAccessSubmit(isRestricted) {
-    setTimeout(function() { this.setState({isRestricted: isRestricted}); }.bind(this), 3000);
+    setTimeout(
+      function() {
+        this.setState({ isRestricted: isRestricted });
+      }.bind(this),
+      3000
+    );
   }
 
   handleAnswerClick(answer, question) {
     let curQA;
     const arrayAnswers = this.state.userAnswers.slice();
 
-    curQA = {question: question, answer: answer};
-    arrayAnswers.push(curQA)
+    curQA = { question: question, answer: answer };
+    arrayAnswers.push(curQA);
     this.setState({ userAnswers: arrayAnswers });
 
     const count = this.state.questionCount + 1;
-    this.setState({questionCount: count});
+    this.setState({ questionCount: count });
   }
 
   handleSurvey() {
-    if(this.state.questionCount > 6) {
-      return(
-        <SaveSurvey surveyAnswers={this.state.userAnswers}></SaveSurvey>
-      )
+    if (this.state.questionCount > 6) {
+      return <SaveSurvey surveyAnswers={this.state.userAnswers} />;
     }
   }
 
   render() {
     return (
       <div>
-        <Hero></Hero>
-        <Slogan></Slogan>
-        {!this.state.isRestricted &&
-          <Product isRestricted={this.state.isRestricted}></Product>
-        }
-        {!this.state.isRestricted &&
-          <Peer isRestricted={this.state.isRestricted}></Peer>
-        }
-        {!this.state.isRestricted &&
-          <Brand isRestricted={this.state.isRestricted}></Brand>
-        }
-        <Team isRestricted={this.state.isRestricted}></Team>
-        {this.state.isRestricted &&
-          <Beta isRestricted={this.state.isRestricted}></Beta>
-        }
-        {!this.state.isRestricted &&
-          <Survey
-            questionCount={this.state.questionCount}
-            onAnswerSubmit={this.handleAnswerClick}
-            isRestricted={this.state.isRestricted}
-          />
-        }
-        <Contact isRestricted={this.state.isRestricted}></Contact>
-        <Access
+        <Survey
+          questionCount={this.state.questionCount}
+          onAnswerSubmit={this.handleAnswerClick}
           isRestricted={this.state.isRestricted}
-          onAccessSubmit={this.handleAllAccessSubmit}
-          errorMessage={this.state.errorMessage}
         />
+
         {this.handleSurvey()}
       </div>
     );
